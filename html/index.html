@@ -6,12 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- za swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- za swiper -->
     <title>Projekat</title>
 </head>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+</script>
 
 <body>
 
-    <img src="../logo1.png" alt="logo" class="logo" width="300px">
+
+    <img src="../logo.png" alt="logo" class="logo">
 
     <div class="header">
         <a href="#home">Die Metzgerei</a>
@@ -33,21 +55,122 @@
 
     <section class="image-section">
         <div class="opacity-card">
-            <!-- <p>Heiko Brath Metzgermeister</p> -->
-            <p>Deutsches Ipsum Dolor deserunt dissentias Grimms Märchen et. Tollit argumentum ius an. Pfannkuchen
-                lobortis elaboraret per ne, nam Aperol Spritz probatus pertinax.</p>
+            <div class="left-opacity"></div>
+            <div class="right-opacity">
+                <h1>Heiko Brath Metzgermeister</h1>
+                <p>Deutsches Ipsum Dolor deserunt dissentias Grimms Märchen et. Tollit argumentum ius an. Pfannkuchen
+                    lobortis elaboraret per ne, nam Aperol Spritz probatus pertinax.</p>
+            </div>
         </div>
+
         <img src="../BRATH.png" alt="">
-
     </section>
 
-    <section class="image-section">
+    <div class="section section-dark">
+        <div class="content-container">
+            <div class="content">
+                <h1>Dry aged</h1>
+                <h2>Alte Wutz, Dry Aged</h2>
+                <p>
+                    Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna 99
+                    Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi Sprechen
+                    Sie deutsch aliquip ex ea commodo consequat. Wiener Schnitzel aute irure dolor in reprehenderit
+                    Guten Tag mollit anim Stuttgart.
+                </p>
+                <p>
+                    id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expectenda
+                    nam an, his ei Reise euismod assentior.
+                </p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Dry aged</button>
+                    <button class="btn btn-primary">Alte Wutz</button>
+                </div>
+            </div>
+            <div class="images">
+                <img class="main-image" src="../pictureFor2.png" alt="Dry Aged Image">
+                <div class="thumbnails">
+                    <img src="../pictureFor1.png" alt="Thumbnail 1">
+                    <img src="../pictureMain.png" alt="Thumbnail 2">
+                    <img src="../pictureFor3.png" alt="Thumbnail 3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-red">
+        <div class="container-text first">
+            <h1>Buchen Sie den
+                Grillkurs jetzt
+            </h1>
+            <ul>
+                <li>professioneller Lehrer</li>
+                <li>ausgezeichneter Metzger</li>
+                <li>1 Tag</li>
+                <li>lernen Sie die Kunst des Grillens</li>
+            </ul>
+            <div class="buttons">
+                <button class="btn btn-primary">Dry aged</button>
+            </div>
+        </div>
+        <div class="container-image">
+            <img class="only-image" src="../pictureSection.jpg" alt="Dry Aged Image">
+        </div>
+    </div>
+    <!-- handwerk -->
+    <div class="section-handwerk">
+        <div class="handwerk-text">
+            <h1>Das Handwerk</h1>
+            <h2>alles über unsere Hausgemachte Produkte</h2>
+            <p>
+                Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna 99
+                Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi Sprechen Sie
+                deutsch aliquip ex ea commodo consequat.
+            </p>
+            <p>
+                Wiener Schnitzel aute irure dolor in Guten Tag mollit anim Stuttgart.
+            </p>
+            <p>
+                id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam an,
+                his ei Reise euismod assentior
+            </p>
 
-    </section>
 
-    <section class="image-section">
+            <div class="buttons">
+                <button class="btn btn-primary">Das Handwerk</button>
+            </div>
+            <!-- <button>Das Handwerk</button> -->
+            <img src="../vonal 1.png" alt="line-picture " class="long-image">
+            <div class="imgroup">
+                <img src="../wurstchen.png" alt="Thumbnail 1">
+                <img src="../hanchen.png" alt="Thumbnail 2">
+                <img src="../schwein.png" alt="Thumbnail 3">
+                <img src="../rind.png" alt="Thumbnail 3">
+            </div>
+        </div>
+    </div>
+    <!-- handwerk -->
 
-    </section>
+    <div class="section-red">
+        <div class="container-image">
+            <img class="only-image" src="../spice.jpg" alt="Dry Aged Image">
+        </div>
+        <div class="container-text second">
+            <h1>Custome spices for your meat
+            </h1>
+            <h2>Turnbeutel nostrud exercitation ullamco
+                Sprechen Sie deutsch
+            </h2>
+            <p>Odio principes iracundia Müller Rice pri. Ut vel solum mandamus, Kartoffelkopf natum adversarium ei ius,
+                diam Schmetterling honestatis eum.<br><br>
+                Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore
+                magna 99 Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi
+                Sprechen Sie deutsch aliquip ex ea commodo consequat.
+            </p>
+
+        </div>
+
+    </div>
+
+
 </body>
 
 </html>

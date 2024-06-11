@@ -1,0 +1,69 @@
+@import "colors.scss";
+
+// .section-handwerk {
+//   background-color: blue;
+//   height: 1160px;
+// }
+
+.section-handwerk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   height: auto;
+
+  .handwerk-text {
+    text-align: center;
+    width: 100%;
+    color: #fff;
+
+    h1 {
+      font-size: 32px;
+      line-height: 26px;
+      margin-bottom: 16px;
+      margin-top: 119px;
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 65px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      font-weight: 300;
+      width: 652px;
+    }
+
+    .btn {
+      //   padding: 12px 36px 13px 34px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+
+      &-primary {
+        background-color: $thirdBox-Color;
+        margin: 30px 0 82px 0;
+        color: #fff;
+        border: 1px solid white;
+        padding: 12px 36px 13px 34px;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+    .long-image {
+      margin-bottom: 46px;
+    }
+    .imgroup img {
+      width: 262px;
+      margin-right: 13px;
+      margin-bottom: 227px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

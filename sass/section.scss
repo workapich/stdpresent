@@ -1,0 +1,77 @@
+@import "colors.scss";
+
+.section-red {
+  display: flex;
+  color: #fff;
+  background-color: $thirdBox-Color;
+
+  .container-text,
+  .container-image {
+    flex: 1;
+    display: flex;
+  }
+
+  .first {
+    flex-direction: column;
+    margin: 128px 242px 0px 427px;
+  }
+  .container-text.second {
+    flex-direction: column;
+    width: 432px;
+    justify-content: center;
+    margin: 128px 405px 181px 124px;
+  }
+
+  .only-image {
+    width: 960px;
+    height: 705px;
+  }
+  .container-text.first h1 {
+    width: 231px;
+    height: 92px;
+    margin-bottom: 29px;
+    line-height: 42px;
+  }
+  .container-text.second h1 {
+    width: 432px;
+    height: 42px;
+  }
+  .container-text.second h2 {
+    width: 442px;
+    height: 42px;
+    font-size: 22px;
+  }
+  .container-text.second p {
+    width: 431px;
+    height: 219px;
+    font-size: 16px;
+  }
+  p {
+    margin-top: 33px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  li {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  li {
+    margin-left: 20px;
+  }
+  .btn {
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 0 0 0 6px;
+
+    &-primary {
+      background-color: #fff;
+      margin-top: 66px;
+      color: $base-color;
+      border: 1px solid $border-button;
+      padding: 12px 56px 13px 55px;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+}

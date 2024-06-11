@@ -1,15 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
-$base-color: #252525;
-$thirdBox-Color: #a62120;
-
-$background-Color: #0f0f0f;
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import "section.scss";
+@import "colors.scss";
+@import "handwerk.scss";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+// za swiper
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// za swiper
 
 body {
   font-family: "Roboto", sans-serif;
@@ -18,13 +30,16 @@ body {
 
 .header {
   overflow: hidden;
-  background-color: #b50014;
+  background-color: $header-Color;
   height: 93px;
   position: relative;
   border-bottom: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  // gap: px;
+  // width: 916px;
 }
 .header a {
   font-size: 16px;
@@ -32,11 +47,11 @@ body {
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
-  margin-right: 15px;
+  margin-right: 41px;
 }
 
 .header a:last-child {
-  margin-right: 0;
+  margin-right: -100px;
 }
 
 .header a:first-child {
@@ -55,21 +70,20 @@ body {
     font-weight: 400;
     align-items: end;
     margin-left: auto;
-    margin-right: 250px;
+    margin-right: 298px;
   }
 }
 
 .logo {
   position: absolute;
-  top: -25px;
+  top: -5px;
   left: 15%;
   transform: translateX(-50%);
-  width: 15%;
+  width: 10%;
   z-index: 1;
 }
-
 .image-section {
-  text-align: center;
+  // text-align: center;
   height: 75vh;
   position: relative;
   display: flex;
@@ -91,11 +105,133 @@ body {
   color: white;
   position: absolute;
   left: 0;
+  top: 25%;
+  display: flex;
+}
+
+.left-opacity {
+  width: 50%;
+  background-color: transparent; /* Adjust this color if needed */
+}
+
+.right-opacity {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: center; /* Center vertically */
+  align-items: flex-start; /* Align to the start horizontally */
+  padding: 20px; /* Adjust padding as needed */
+  margin-right: 56px;
 }
+
+.right-opacity h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+.right-opacity p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+//novo
+
+.section {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 114px 419px 90px 412px;
+  height: auto;
+
+  &-dark {
+    background-color: #000;
+    width: 100%;
+
+    .content-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1125px;
+      width: 100%;
+    }
+
+    .content {
+      max-width: 427px;
+      margin-right: 125px;
+
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        margin: 0 0 41px;
+        font-size: 22px;
+      }
+
+      p {
+        margin: 0 0 10px;
+        width: 427px;
+        // height: 219px;
+        font-weight: 300;
+        font-size: 16px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 16px;
+
+        .btn {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 25px;
+          cursor: pointer;
+
+          &-primary {
+            background-color: $thirdBox-Color;
+            margin-top: 66px;
+            color: #fff;
+            border: 1px solid white;
+            padding: 12px 56px 13px 55px;
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 17px;
+
+      .main-image {
+        width: 537px;
+        height: 326px;
+      }
+
+      .thumbnails {
+        display: flex;
+        gap: 17px;
+
+        img {
+          width: 167px;
+          height: 167px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  // &-red {
+  //   background-color: $thirdBox-Color;
+  //   width: 100%;
+  // }
+}
+//novo
+
+//raznjic deo
+
+//raznjic deo
 
 @media screen and (max-width: 500px) {
   .header {

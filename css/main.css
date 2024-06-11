@@ -1,8 +1,149 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+.section-red {
+  display: flex;
+  color: #fff;
+  background-color: #a62120;
+}
+.section-red .container-text,
+.section-red .container-image {
+  flex: 1;
+  display: flex;
+}
+.section-red .first {
+  flex-direction: column;
+  margin: 128px 242px 0px 427px;
+}
+.section-red .container-text.second {
+  flex-direction: column;
+  width: 432px;
+  justify-content: center;
+  margin: 128px 405px 181px 124px;
+}
+.section-red .only-image {
+  width: 960px;
+  height: 705px;
+}
+.section-red .container-text.first h1 {
+  width: 231px;
+  height: 92px;
+  margin-bottom: 29px;
+  line-height: 42px;
+}
+.section-red .container-text.second h1 {
+  width: 432px;
+  height: 42px;
+}
+.section-red .container-text.second h2 {
+  width: 442px;
+  height: 42px;
+  font-size: 22px;
+}
+.section-red .container-text.second p {
+  width: 431px;
+  height: 219px;
+  font-size: 16px;
+}
+.section-red p {
+  margin-top: 33px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.section-red li {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+.section-red li {
+  margin-left: 20px;
+}
+.section-red .btn {
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 0 0 0 6px;
+}
+.section-red .btn-primary {
+  background-color: #fff;
+  margin-top: 66px;
+  color: #252525;
+  border: 1px solid #ff0000;
+  padding: 12px 56px 13px 55px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.section-handwerk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-handwerk .handwerk-text {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+.section-handwerk .handwerk-text h1 {
+  font-size: 32px;
+  line-height: 26px;
+  margin-bottom: 16px;
+  margin-top: 119px;
+}
+.section-handwerk .handwerk-text h2 {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 65px;
+}
+.section-handwerk .handwerk-text p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-weight: 300;
+  width: 652px;
+}
+.section-handwerk .handwerk-text .btn {
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.section-handwerk .handwerk-text .btn-primary {
+  background-color: #a62120;
+  margin: 30px 0 82px 0;
+  color: #fff;
+  border: 1px solid white;
+  padding: 12px 36px 13px 34px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.section-handwerk .handwerk-text .long-image {
+  margin-bottom: 46px;
+}
+.section-handwerk .handwerk-text .imgroup img {
+  width: 262px;
+  margin-right: 13px;
+  margin-bottom: 227px;
+}
+.section-handwerk .handwerk-text .imgroup img:last-child {
+  margin-right: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -27,11 +168,11 @@ body {
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
-  margin-right: 15px;
+  margin-right: 41px;
 }
 
 .header a:last-child {
-  margin-right: 0;
+  margin-right: -100px;
 }
 
 .header a:first-child {
@@ -50,20 +191,19 @@ body {
   font-weight: 400;
   align-items: end;
   margin-left: auto;
-  margin-right: 250px;
+  margin-right: 298px;
 }
 
 .logo {
   position: absolute;
-  top: -25px;
+  top: -5px;
   left: 15%;
   transform: translateX(-50%);
-  width: 15%;
+  width: 10%;
   z-index: 1;
 }
 
 .image-section {
-  text-align: center;
   height: 75vh;
   position: relative;
   display: flex;
@@ -85,10 +225,109 @@ body {
   color: white;
   position: absolute;
   left: 0;
+  top: 25%;
+  display: flex;
+}
+
+.left-opacity {
+  width: 50%;
+  background-color: transparent; /* Adjust this color if needed */
+}
+
+.right-opacity {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center; /* Center vertically */
+  align-items: flex-start; /* Align to the start horizontally */
+  padding: 20px; /* Adjust padding as needed */
+  margin-right: 56px;
+}
+
+.right-opacity h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.right-opacity p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.section {
+  color: #fff;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  padding: 114px 419px 90px 412px;
+  height: auto;
+}
+.section-dark {
+  background-color: #000;
+  width: 100%;
+}
+.section-dark .content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1125px;
+  width: 100%;
+}
+.section-dark .content {
+  max-width: 427px;
+  margin-right: 125px;
+}
+.section-dark .content h1 {
+  font-size: 32px;
+}
+.section-dark .content h2 {
+  margin: 0 0 41px;
+  font-size: 22px;
+}
+.section-dark .content p {
+  margin: 0 0 10px;
+  width: 427px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.section-dark .content .buttons {
+  display: flex;
+  gap: 16px;
+}
+.section-dark .content .buttons .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.section-dark .content .buttons .btn-primary {
+  background-color: #a62120;
+  margin-top: 66px;
+  color: #fff;
+  border: 1px solid white;
+  padding: 12px 56px 13px 55px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.section-dark .images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+}
+.section-dark .images .main-image {
+  width: 537px;
+  height: 326px;
+}
+.section-dark .images .thumbnails {
+  display: flex;
+  gap: 17px;
+}
+.section-dark .images .thumbnails img {
+  width: 167px;
+  height: 167px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {
