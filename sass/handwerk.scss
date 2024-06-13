@@ -67,3 +67,103 @@
     }
   }
 }
+.secondOne {
+  .first {
+    width: 50%;
+    margin: 0 auto;
+    height: 540px; /* Adjust height to auto to accommodate variable content height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .firstone,
+  .secondone {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .secondone h2 {
+    padding: 20px;
+    margin-bottom: 0 !important;
+    font-weight: 700;
+    font-size: 32px !important;
+    line-height: 42px;
+  }
+
+  .secondone {
+    text-align: left;
+    margin-left: 130px;
+  }
+
+  .secondone button {
+    margin-bottom: 0 !important;
+    margin-left: 10px !important;
+  }
+
+  .image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto; /* This pushes the image-row to the bottom */
+  }
+
+  .long-image {
+    display: block;
+    margin: 0 !important;
+  }
+
+  .golds-container {
+    display: flex;
+    align-items: center;
+    width: 1098px;
+    justify-content: center;
+
+    margin-bottom: 20px;
+  }
+
+  .golds {
+    flex: 1;
+    // gap: ;
+    // margin: 0 50px;
+  }
+
+  .golds img {
+    width: 120px;
+
+    height: 120px;
+  }
+
+  .golds p {
+    width: 176px;
+    color: rgba(255, 255, 255, 0.51);
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .golds-text {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 120px; /* same height as the images */
+  }
+
+  .golds-text h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+}

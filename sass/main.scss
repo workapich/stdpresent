@@ -2,12 +2,21 @@
 @import "section.scss";
 @import "colors.scss";
 @import "handwerk.scss";
+@import "pagination.scss";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-// za swiper
+
+.section-paralax {
+  background-image: url("../meso2.png");
+  height: 540px;
+  background-attachment: fixed;
+  // background-size: cover;
+  // background-position: center;
+  // scale: 0.9;
+}
 .swiper {
   width: 100%;
   height: 100%;
@@ -15,14 +24,50 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-// za swiper
 
+/* Navigation buttons styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: red; /* Change the color of the navigation arrows to red */
+  top: 89%;
+  // background-color: #fff;
+  width: 33px; /* Adjust width as needed */
+  height: 33px; /* Adjust height as needed */
+  font-size: 0; /* Set font-size to 0 to hide any text */
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 10px;
+}
+/* Center the arrows inside the buttons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 25px; /* Adjust the size of the arrow icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next {
+  right: calc(50% - 100px);
+}
+
+.swiper-button-prev {
+  left: calc(50% - 100px);
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  width: 17px;
+  height: 17px;
+  margin-bottom: 52px !important;
+  &:active {
+    background-color: red;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   background-color: $background-Color;
@@ -80,7 +125,7 @@ body {
   left: 15%;
   transform: translateX(-50%);
   width: 10%;
-  z-index: 1;
+  z-index: 3;
 }
 .image-section {
   // text-align: center;
@@ -90,12 +135,14 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: 1; /* Ensure this section is on the correct layer */
 }
 
 .image-section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1; /* Ensure the image is behind the opacity-card */
 }
 
 .opacity-card {
@@ -107,6 +154,7 @@ body {
   left: 0;
   top: 25%;
   display: flex;
+  z-index: 2;
 }
 
 .left-opacity {

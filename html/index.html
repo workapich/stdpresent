@@ -4,35 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- za swiper -->
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- za swiper -->
+    <link rel="stylesheet" href="../css/main.css">
+
     <title>Projekat</title>
 </head>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        cssMode: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        mousewheel: true,
-        keyboard: true,
-    });
-</script>
 
 <body>
-
-
     <img src="../logo.png" alt="logo" class="logo">
 
     <div class="header">
@@ -63,7 +43,18 @@
             </div>
         </div>
 
-        <img src="../BRATH.png" alt="">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 1"></div>
+                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 2"></div>
+                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 3"></div>
+                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 4"></div>
+                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 5"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
 
     <div class="section section-dark">
@@ -115,7 +106,7 @@
             <img class="only-image" src="../pictureSection.jpg" alt="Dry Aged Image">
         </div>
     </div>
-    <!-- handwerk -->
+
     <div class="section-handwerk">
         <div class="handwerk-text">
             <h1>Das Handwerk</h1>
@@ -132,45 +123,186 @@
                 id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam an,
                 his ei Reise euismod assentior
             </p>
-
-
             <div class="buttons">
                 <button class="btn btn-primary">Das Handwerk</button>
             </div>
-            <!-- <button>Das Handwerk</button> -->
-            <img src="../vonal 1.png" alt="line-picture " class="long-image">
+            <img src="../vonal 1.png" alt="line-picture" class="long-image">
             <div class="imgroup">
                 <img src="../wurstchen.png" alt="Thumbnail 1">
                 <img src="../hanchen.png" alt="Thumbnail 2">
                 <img src="../schwein.png" alt="Thumbnail 3">
-                <img src="../rind.png" alt="Thumbnail 3">
+                <img src="../rind.png" alt="Thumbnail 4">
             </div>
         </div>
     </div>
-    <!-- handwerk -->
 
     <div class="section-red">
         <div class="container-image">
             <img class="only-image" src="../spice.jpg" alt="Dry Aged Image">
         </div>
         <div class="container-text second">
-            <h1>Custome spices for your meat
-            </h1>
-            <h2>Turnbeutel nostrud exercitation ullamco
-                Sprechen Sie deutsch
-            </h2>
+            <h1>Custome spices for your meat</h1>
+            <h2>Turnbeutel nostrud exercitation ullamco Sprechen Sie deutsch</h2>
             <p>Odio principes iracundia Müller Rice pri. Ut vel solum mandamus, Kartoffelkopf natum adversarium ei ius,
                 diam Schmetterling honestatis eum.<br><br>
                 Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore
                 magna 99 Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi
                 Sprechen Sie deutsch aliquip ex ea commodo consequat.
             </p>
-
         </div>
+    </div>
 
+    <div class="section-paralax">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In culpa consectetur ullam voluptatum aperiam,
+            neque iure, sapiente placeat minus illum reprehenderit velit perferendis soluta nihil, fugit quibusdam fuga
+            eius sint!</p>
+        <button>asasa</button>
     </div>
 
 
+    <div class="section-handwerk secondOne">
+        <div class="handwerk-text secondOne">
+            <div class="first">
+                <div class="content-row">
+                    <div class="firstone">
+                        <img src="../secondLogo.png" alt="Thumbnail 1">
+                    </div>
+                    <div class="secondone">
+                        <h2>Metzgerei Brath ist Mitglied im Genussnetzwerk</h2>
+                        <div class="buttons">
+                            <button class="btn btn-primary">Das Handwerk</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-row">
+                    <img src="../vonal 1.png" alt="line-picture" class="long-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="section-handwerk secondOne">
+        <div class="handwerk-text secondOne">
+            <div class="first">
+                <div class="content-row">
+                    <div class="golds-container">
+                        <div class="golds-text">
+                            <h1>Auszeichnungen</h1>
+                        </div>
+                        <div class="golds">
+                            <img src="../zlatnik1.png" alt="Thumbnail 1">
+                            <p>Tollit argumentum genau
+                                Saepe lobortis</p>
+                        </div>
+
+                        <div class="golds">
+                            <img src="../zlatnik1.png" alt="Thumbnail 1">
+                            <p>Tollit argumentum genau
+                                Saepe lobortis</p>
+                        </div>
+                        <div class="golds">
+                            <img src="../zlatnik1.png" alt="Thumbnail 1">
+                            <p>Tollit argumentum genau
+                                Saepe lobortis</p>
+                        </div>
+                        <div class="golds">
+                            <img src="../zlatnik1.png" alt="Thumbnail 1">
+                            <p>Tollit argumentum genau
+                                Saepe lobortis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-row">
+                    <img src="../vonal 1.png" alt="line-picture" class="long-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-pagination">
+        <div class="slider-container">
+
+            <div class="slider-content">
+
+                <div class="slider-single">
+                    <img class="something-new" src="../coffe.png" alt="3" />
+                    <img class="something-new" src="../zvezdice.png" alt="3" />
+                    <div class="text">
+
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore
+                            et
+                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+                        <p>Halling Tobias</p>
+                        <p>Koch1</p>
+                    </div>
+                    <img class="image-below" src="../znak.png" alt="3" />
+
+                </div>
+                <div class="slider-single">
+                    <img class="something-new" src="../coffe.png" alt="3" />
+                    <img class="something-new" src="../zvezdice.png" alt="3" />
+                    <div class="text">
+
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore
+                            et
+                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+                        <p>Halling Tobias</p>
+                        <p>Koch2</p>
+                    </div>
+                    <img class="image-below" src="../znak.png" alt="3" />
+
+                </div>
+                <div class="slider-single">
+                    <img class="something-new" src="../coffe.png" alt="3" />
+                    <img class="something-new" src="../zvezdice.png" alt="3" />
+                    <div class="text">
+
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore
+                            et
+                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+                        <p>Halling Tobias</p>
+                        <p>Koch3</p>
+                    </div>
+                    <img class="image-below" src="../znak.png" alt="3" />
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var swiper = new Swiper(".mySwiper", {
+                cssMode: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+
+                },
+                // mousewheel: true,
+                keyboard: true,
+            });
+        });
+    </script>
 </body>
 
 </html>
