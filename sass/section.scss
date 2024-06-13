@@ -67,7 +67,8 @@
     &-primary {
       background-color: #fff;
       margin-top: 66px;
-      color: $base-color;
+      color: black !important;
+
       border: 1px solid $border-button;
       padding: 12px 56px 13px 55px;
       font-weight: 400;

@@ -163,3 +163,73 @@ function goToIndexSlide(index) {
 }
 
 slideInitial();
+
+function downloadPDF() {
+  const { jsPDF } = window.jspdf;
+
+  html2canvas(document.body).then((canvas) => {
+    const imgData = canvas.toDataURL("image/png");
+    const doc = new jsPDF({
+      orientation: "portrait",
+      unit: "px",
+      format: [canvas.width, canvas.height],
+    });
+    doc.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
+    doc.save("page.pdf");
+  });
+}
+
+function myFunction() {
+  let checkbox = document.getElementById("toggleSwitch");
+  let element = document.body;
+
+  if (checkbox.checked) {
+    element.classList.add("dark");
+  } else {
+    element.classList.remove("dark");
+  }
+}
+const images = document.querySelectorAll(".dynamic-image");
+
+// Function to toggle images based on dark mode
+function toggleImagesBasedOnMode() {
+  const isDarkMode = document.body.classList.contains("dark");
+
+  images.forEach((image) => {
+    const src = image.src;
+
+    const newSrc = !isDarkMode
+      ? src.replace("-dark.png", ".png")
+      : src.replace(".png", "-dark.png");
+
+    image.src = newSrc;
+  });
+}
+
+// Initial toggle based on current body class
+toggleImagesBasedOnMode();
+
+// Listen for changes in body class (e.g., toggling dark mode)
+const observer = new MutationObserver(() => {
+  toggleImagesBasedOnMode();
+});
+
+observer.observe(document.body, {
+  attributes: true,
+  attributeFilter: ["class"],
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  var swiper = new Swiper(".mySwiper", {
+    cssMode: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    keyboard: true,
+  });
+});

@@ -1,5 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap";
+body {
+  transition: background-color 0.7s, transform 0.7s;
+  background-color: #0f0f0f !important;
+  color: white !important;
+}
+body .above-carousel h1 {
+  color: #fff;
+}
+body .above-carousel p {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .btn {
+  color: white;
+}
+body .below {
+  background-color: #252525 !important;
+}
+body .opacity-card {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body.dark {
+  background-color: #f0f0f0 !important;
+  color: black !important;
+}
+body.dark .opacity-card {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+body.dark .btn {
+  color: white;
+}
+body.dark .below {
+  background-color: #8a8989 !important;
+}
+body.dark .above-carousel h1 {
+  color: black;
+}
+body.dark .above-carousel p {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .section-red {
   display: flex;
   color: #fff;
@@ -65,11 +105,91 @@
 .section-red .btn-primary {
   background-color: #fff;
   margin-top: 66px;
-  color: #252525;
+  color: black !important;
   border: 1px solid #ff0000;
   padding: 12px 56px 13px 55px;
   font-weight: 400;
   font-size: 16px;
+}
+
+body {
+  transition: background-color 0.7s, transform 0.7s;
+  background-color: #0f0f0f !important;
+  color: white !important;
+}
+body .above-carousel h1 {
+  color: #fff;
+}
+body .above-carousel p {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .btn {
+  color: white;
+}
+body .below {
+  background-color: #252525 !important;
+}
+body .opacity-card {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body.dark {
+  background-color: #f0f0f0 !important;
+  color: black !important;
+}
+body.dark .opacity-card {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+body.dark .btn {
+  color: white;
+}
+body.dark .below {
+  background-color: #8a8989 !important;
+}
+body.dark .above-carousel h1 {
+  color: black;
+}
+body.dark .above-carousel p {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  transition: background-color 0.7s, transform 0.7s;
+  background-color: #0f0f0f !important;
+  color: white !important;
+}
+body .above-carousel h1 {
+  color: #fff;
+}
+body .above-carousel p {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .btn {
+  color: white;
+}
+body .below {
+  background-color: #252525 !important;
+}
+body .opacity-card {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body.dark {
+  background-color: #f0f0f0 !important;
+  color: black !important;
+}
+body.dark .opacity-card {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+body.dark .btn {
+  color: white;
+}
+body.dark .below {
+  background-color: #8a8989 !important;
+}
+body.dark .above-carousel h1 {
+  color: black;
+}
+body.dark .above-carousel p {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .section-handwerk {
@@ -80,7 +200,6 @@
 .section-handwerk .handwerk-text {
   text-align: center;
   width: 100%;
-  color: #fff;
 }
 .section-handwerk .handwerk-text h1 {
   font-size: 32px;
@@ -213,12 +332,39 @@
 
 .container-pagination {
   color: #ffffff;
-  background-color: #0f0f0f;
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
-  height: 1200px;
+  height: auto;
+}
+.container-pagination .above-carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-pagination .above-carousel h1 {
+  font-weight: 700;
+  font-size: 32px;
+}
+.container-pagination .above-carousel p {
+  padding: 20px 0 20px 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container-pagination .above-carousel .buttons .btn {
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.container-pagination .above-carousel .buttons .btn-primary {
+  background-color: #a62120;
+  border: 1px solid white;
+  padding: 12px 56px 13px 55px;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 76px;
 }
 
 .slider-container {
@@ -377,6 +523,30 @@
   background-image: url("../meso2.png");
   height: 540px;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-paralax .buttons {
+  padding-top: 40px;
+}
+.section-paralax .buttons .btn {
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.section-paralax .buttons .btn-primary {
+  background-color: #fff;
+  color: #252525;
+  border: 1px solid #ff0000;
+  padding: 12px 56px 13px 55px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.section-paralax h1 {
+  font-weight: 700;
+  font-size: 32px;
 }
 
 .swiper {
@@ -394,46 +564,50 @@
 /* Navigation buttons styles */
 .swiper-button-next,
 .swiper-button-prev {
-  color: red; /* Change the color of the navigation arrows to red */
-  top: 89%;
-  width: 33px; /* Adjust width as needed */
-  height: 33px; /* Adjust height as needed */
-  font-size: 0; /* Set font-size to 0 to hide any text */
+  color: #fff;
+  top: 90.2%;
+  width: 33px;
+  height: 33px;
   border-radius: 50%;
   border: 2px solid #fff;
-  padding: 10px;
 }
 
-/* Center the arrows inside the buttons */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 25px; /* Adjust the size of the arrow icon */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 24px;
+}
+
+.swiper-button-next::after {
+  margin-left: 4px;
+}
+
+.swiper-button-prev::after {
+  margin-right: 4px;
 }
 
 .swiper-button-next {
-  right: calc(50% - 100px);
+  right: calc(50% - 135px);
 }
 
 .swiper-button-prev {
-  left: calc(50% - 100px);
+  left: calc(50% - 150px);
 }
 
 .swiper-pagination-bullet {
   background: white;
+  border: 2px solid white;
   width: 17px;
   height: 17px;
   margin-bottom: 52px !important;
+  margin-right: 21px !important;
 }
-.swiper-pagination-bullet:active {
-  background-color: red;
+
+.swiper-pagination-bullet-active {
+  background-color: red !important;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #0f0f0f;
 }
 
 .header {
@@ -466,17 +640,15 @@ body {
 
 .below {
   display: flex;
-  background-color: #252525;
   height: auto;
   padding: 10px 10px;
 }
 .below p {
-  color: #ffffff;
   font-size: 16px;
   font-weight: 400;
   align-items: end;
   margin-left: auto;
-  margin-right: 298px;
+  margin-right: 10px;
 }
 
 .logo {
@@ -508,8 +680,6 @@ body {
 .opacity-card {
   width: 34%;
   height: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
   position: absolute;
   left: 0;
   top: 25%;
@@ -544,7 +714,6 @@ body {
 }
 
 .section {
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -552,7 +721,6 @@ body {
   height: auto;
 }
 .section-dark {
-  background-color: #000;
   width: 100%;
 }
 .section-dark .content-container {
@@ -592,7 +760,6 @@ body {
 .section-dark .content .buttons .btn-primary {
   background-color: #a62120;
   margin-top: 66px;
-  color: #fff;
   border: 1px solid white;
   padding: 12px 56px 13px 55px;
   font-weight: 400;
@@ -632,4 +799,139 @@ body {
   .header a:last-child {
     margin-bottom: 0;
   }
+}
+/* Base styles for the switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 298px;
+}
+
+/* Hide the default input */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider base styles */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red; /* Default color when off */
+  transition: background-color 0.4s;
+  border-radius: 24px; /* Round slider shape */
+}
+
+/* Slider thumb (circle) */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white; /* Default color of the thumb */
+  transition: background-color 0.7s, transform 0.7s;
+  border-radius: 50%; /* Rounded shape for the thumb */
+}
+
+/* Styles for the slider when it's checked (active state) */
+input:checked + .slider {
+  background-color: white; /* Change background color when checked */
+}
+
+/* Move the thumb to the right when checked */
+input:checked + .slider:before {
+  background-color: red; /* Change color of the thumb when checked */
+  transform: translateX(26px);
+}
+
+.footer {
+  padding: 0 300px;
+  background-color: #b50014;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 300px;
+  background-color: #66000b;
+  color: white; /* Assuming you want white text */
+}
+.footer-line .second,
+.footer-line .first {
+  /* Aligns the second element to the end */
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400px;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 28px;
+}
+.footer-line .second span,
+.footer-line .first span {
+  color: white;
+  text-decoration: underline;
+}
+.footer-line .second {
+  text-align: right;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-column p {
+  display: flex;
+  width: 220px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.footer-column.last {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end; /* Aligns items to the end */
+}
+
+.footer-column.first {
+  width: 320px;
+}
+
+.footer-column p img {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.footer-column img {
+  width: 131px;
+  height: 131px;
+}
+
+.footer-column:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-column:nth-child(3) img {
+  width: 41px;
+  margin-left: 10px;
+  height: 41px;
 }

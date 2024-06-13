@@ -6,12 +6,39 @@
 
 .container-pagination {
   color: #ffffff;
-  background-color: #0f0f0f;
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
-  height: 1200px;
+  height: auto;
+}
+.container-pagination .above-carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-pagination .above-carousel h1 {
+  font-weight: 700;
+  font-size: 32px;
+}
+.container-pagination .above-carousel p {
+  padding: 20px 0 20px 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container-pagination .above-carousel .buttons .btn {
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.container-pagination .above-carousel .buttons .btn-primary {
+  background-color: #a62120;
+  border: 1px solid white;
+  padding: 12px 56px 13px 55px;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 76px;
 }
 
 .slider-container {

@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <title>Projekat</title>
 </head>
@@ -24,13 +27,28 @@
         <a href="#about">Tagesessen</a>
         <a href="#home">Impressum</a>
         <a href="#contact">Kontakt</a>
-        <a href="#about"><i class="fa-regular fa-file-pdf"></i>Download</a>
+        <!-- <a href="#about" onclick="downloadPDF()"><i class="fa-regular fa-file-pdf"></i>Download</a> -->
+        <a href="#about" onclick="downloadPDF()"><i class="fa-regular fa-file-pdf"></i>Download</a>
+
+
+        <!-- <a href="#about" onclick="downloadPDF()"><i class=" fa-regular fa-file-pdf"></i>Download</a> -->
     </div>
     <div class="below">
+
         <p>
+
             <i class="fa-regular fa-clock"></i> <strong>Opentime:</strong> Di. - Fr.: 07:00-13:00 und 15:00-18:30. Sa.:
             07:30 - 12:30
         </p>
+
+
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch" onchange="myFunction()">
+            <span class="slider round"></span>
+        </label>
+
+
+
     </div>
 
     <section class="image-section">
@@ -51,9 +69,13 @@
                 <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 4"></div>
                 <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 5"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-wrapper">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
         </div>
     </section>
 
@@ -126,7 +148,7 @@
             <div class="buttons">
                 <button class="btn btn-primary">Das Handwerk</button>
             </div>
-            <img src="../vonal 1.png" alt="line-picture" class="long-image">
+            <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
             <div class="imgroup">
                 <img src="../wurstchen.png" alt="Thumbnail 1">
                 <img src="../hanchen.png" alt="Thumbnail 2">
@@ -153,10 +175,10 @@
     </div>
 
     <div class="section-paralax">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In culpa consectetur ullam voluptatum aperiam,
-            neque iure, sapiente placeat minus illum reprehenderit velit perferendis soluta nihil, fugit quibusdam fuga
-            eius sint!</p>
-        <button>asasa</button>
+        <h1>Fleischversand</h1>
+        <div class="buttons">
+            <button class="btn btn-primary">Jetzt bestellen</button>
+        </div>
     </div>
 
 
@@ -165,7 +187,7 @@
             <div class="first">
                 <div class="content-row">
                     <div class="firstone">
-                        <img src="../secondLogo.png" alt="Thumbnail 1">
+                        <img src="../secondLogo.png" alt="Thumbnail 1" class="dynamic-image">
                     </div>
                     <div class="secondone">
                         <h2>Metzgerei Brath ist Mitglied im Genussnetzwerk</h2>
@@ -175,7 +197,7 @@
                     </div>
                 </div>
                 <div class="image-row">
-                    <img src="../vonal 1.png" alt="line-picture" class="long-image">
+                    <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
                 </div>
             </div>
         </div>
@@ -217,15 +239,19 @@
                 </div>
 
                 <div class="image-row">
-                    <img src="../vonal 1.png" alt="line-picture" class="long-image">
+                    <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
                 </div>
             </div>
         </div>
     </div>
 
 
-
     <div class="container-pagination">
+        <div class="above-carousel">
+            <p>Empfehlungs</p>
+            <h1>Was die Leute über uns sagen</h1>
+        </div>
+
         <div class="slider-container">
 
             <div class="slider-content">
@@ -275,34 +301,56 @@
             </div>
         </div>
 
+        <div class="above-carousel">
+            <div class="buttons">
+                <button class="btn btn-primary">Alle Berichte</button>
+            </div>
+        </div>
+
 
 
     </div>
     <script src="script.js"></script>
 
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            var swiper = new Swiper(".mySwiper", {
-                cssMode: true,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
 
-                },
-                // mousewheel: true,
-                keyboard: true,
-            });
-        });
-    </script>
+
+    <footer class="footer">
+        <div class="footer-column first">
+            <p>
+                <img src="../locationGood.png" alt="">
+                <span>Klauprechtstraße 25 <br>76137 Karlsruhe Germany</span>
+            </p>
+            <p>
+                <img src="../phoneGood.png" alt="">
+                <span>+49 721 358060</span>
+            </p>
+            <p>
+                <img src="../emailGood.png" alt="">
+                <span>info@partyservice-brath.de</span>
+            </p>
+        </div>
+        <div class="footer-column">
+            <img src="../Group.png" alt="Image" class="grup">
+        </div>
+        <div class="footer-column last">
+            <span>Besuchen Sie uns auf:</span>
+            <img src="../Group 610.png" alt="Image 1">
+            <img src="../Group 610.png" alt="Image 2">
+            <img src="../Group 610.png" alt="Image 3">
+            <img src="../Group 610.png" alt="Image 4">
+        </div>
+
+    </footer>
+    <div class="footer-line">
+        <div class="first">
+            © 2020 by Metzgerei Heiko Brath GmbH, Deutschland
+        </div>
+        <div class="second">
+            Code and design by <span>StudioPresent </span></div>
+    </div>
+
 </body>
 
 </html>

@@ -1,3 +1,43 @@
+body {
+  transition: background-color 0.7s, transform 0.7s;
+  background-color: #0f0f0f !important;
+  color: white !important;
+}
+body .above-carousel h1 {
+  color: #fff;
+}
+body .above-carousel p {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .btn {
+  color: white;
+}
+body .below {
+  background-color: #252525 !important;
+}
+body .opacity-card {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body.dark {
+  background-color: #f0f0f0 !important;
+  color: black !important;
+}
+body.dark .opacity-card {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+body.dark .btn {
+  color: white;
+}
+body.dark .below {
+  background-color: #8a8989 !important;
+}
+body.dark .above-carousel h1 {
+  color: black;
+}
+body.dark .above-carousel p {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .section-handwerk {
   display: flex;
   justify-content: center;
@@ -6,7 +46,6 @@
 .section-handwerk .handwerk-text {
   text-align: center;
   width: 100%;
-  color: #fff;
 }
 .section-handwerk .handwerk-text h1 {
   font-size: 32px;

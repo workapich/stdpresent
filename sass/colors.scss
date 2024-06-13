@@ -1,5 +1,67 @@
 $base-color: #252525;
+$base-color-Light: rgb(162, 162, 162) 5;
 $thirdBox-Color: #a62120;
 $header-Color: #b50014;
 $border-button: #ff0000;
 $background-Color: #0f0f0f;
+$background-Color: #f0f0f0;
+
+$background-color-default: #0f0f0f;
+$background-color-dark: #f0f0f0;
+
+$background-color-default: #0f0f0f;
+$background-color-dark: #f0f0f0;
+$base-color: #252525;
+$base-color-light: #8a8989;
+
+body {
+  // transition: background-color 1s, color 1s;
+  transition: background-color 0.7s, transform 0.7s;
+
+  background-color: $background-color-default !important;
+  color: white !important;
+  .above-carousel {
+    h1 {
+      color: #fff;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  .btn {
+    color: white;
+  }
+  .below {
+    background-color: $base-color !important;
+  }
+
+  .opacity-card {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &.dark {
+    background-color: $background-color-dark !important;
+    color: black !important;
+    .opacity-card {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    .btn {
+      color: white;
+    }
+    .below {
+      background-color: $base-color-light !important;
+    }
+
+    .above-carousel {
+      h1 {
+        color: black;
+      }
+
+      p {
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
