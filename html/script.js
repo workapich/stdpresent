@@ -233,3 +233,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
     keyboard: true,
   });
 });
+
+function loadPreference() {
+  let mode = localStorage.getItem("mode");
+  let checkbox = document.getElementById("toggleSwitch");
+  let element = document.body;
+
+  if (mode === "dark") {
+    element.classList.add("dark");
+    checkbox.checked = true;
+  } else {
+    element.classList.remove("dark");
+    checkbox.checked = false;
+  }
+}

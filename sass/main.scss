@@ -3,6 +3,7 @@
 @import "colors.scss";
 @import "handwerk.scss";
 @import "pagination.scss";
+@import "footer.scss";
 * {
   margin: 0;
   padding: 0;
@@ -376,85 +377,4 @@ input:checked + .slider {
 input:checked + .slider:before {
   background-color: red; /* Change color of the thumb when checked */
   transform: translateX(26px);
-}
-.footer {
-  padding: 0 300px;
-  background-color: #b50014;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.footer-line {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 300px;
-  background-color: #66000b;
-  color: white; /* Assuming you want white text */
-
-  .second,
-  .first {
-    /* Aligns the second element to the end */
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: 400px;
-    font-style: italic;
-    font-size: 12px;
-    line-height: 28px;
-    span {
-      color: white;
-      text-decoration: underline;
-    }
-  }
-  .second {
-    text-align: right;
-  }
-}
-.footer-column {
-  // margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footer-column p {
-  display: flex;
-  // align-items: center;
-  // margin: 10px 0;
-  width: 220px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-}
-.footer-column.last {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end; /* Aligns items to the end */
-}
-
-.footer-column.first {
-  width: 320px;
-}
-.footer-column p img {
-  margin-right: 10px;
-  width: 16px;
-  height: 16px;
-}
-
-.footer-column img {
-  width: 131px;
-  height: 131px;
-}
-
-.footer-column:nth-child(3) {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-column:nth-child(3) img {
-  width: 41px;
-  margin-left: 10px;
-  height: 41px;
 }

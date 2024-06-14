@@ -20,6 +20,10 @@ body {
 
   background-color: $background-color-default !important;
   color: white !important;
+
+  .golds p {
+    color: rgba(255, 255, 255, 0.51);
+  }
   .above-carousel {
     h1 {
       color: #fff;
@@ -31,14 +35,21 @@ body {
   }
 
   .btn {
+    transition: 1s;
     color: white;
+  }
+
+  .btn:hover {
+    background-color: #753139 !important;
   }
   .below {
     background-color: $base-color !important;
+    transition: background-color 0.7s, transform 0.7s;
   }
 
   .opacity-card {
     background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.7s, transform 0.7s;
   }
 
   &.dark {
@@ -49,6 +60,10 @@ body {
     }
     .btn {
       color: white;
+    }
+
+    .golds p {
+      color: rgba(0, 0, 0, 0.51);
     }
     .below {
       background-color: $base-color-light !important;

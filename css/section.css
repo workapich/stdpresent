@@ -3,6 +3,9 @@ body {
   background-color: #0f0f0f !important;
   color: white !important;
 }
+body .golds p {
+  color: rgba(255, 255, 255, 0.51);
+}
 body .above-carousel h1 {
   color: #fff;
 }
@@ -10,13 +13,19 @@ body .above-carousel p {
   color: rgba(255, 255, 255, 0.4);
 }
 body .btn {
+  transition: 1s;
   color: white;
+}
+body .btn:hover {
+  background-color: #753139 !important;
 }
 body .below {
   background-color: #252525 !important;
+  transition: background-color 0.7s, transform 0.7s;
 }
 body .opacity-card {
   background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.7s, transform 0.7s;
 }
 body.dark {
   background-color: #f0f0f0 !important;
@@ -27,6 +36,9 @@ body.dark .opacity-card {
 }
 body.dark .btn {
   color: white;
+}
+body.dark .golds p {
+  color: rgba(0, 0, 0, 0.51);
 }
 body.dark .below {
   background-color: #8a8989 !important;
