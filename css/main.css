@@ -301,11 +301,6 @@ body.dark .above-carousel p {
   color: rgba(0, 0, 0, 0.4);
 }
 
-.section-handwerk {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .section-handwerk .handwerk-text {
   text-align: center;
   width: 100%;
@@ -327,7 +322,7 @@ body.dark .above-carousel p {
   margin: 0 auto;
   margin-bottom: 10px;
   font-weight: 300;
-  width: 652px;
+  padding: 0 33% 0 33%;
 }
 .section-handwerk .handwerk-text .btn {
   border: none;
@@ -346,19 +341,52 @@ body.dark .above-carousel p {
 .section-handwerk .handwerk-text .long-image {
   margin-bottom: 46px;
 }
+.section-handwerk .handwerk-text .imgroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .section-handwerk .handwerk-text .imgroup img {
   width: 262px;
   margin-right: 13px;
-  margin-bottom: 227px;
+  margin-bottom: 20px; /* Adjust margin bottom as needed */
 }
-.section-handwerk .handwerk-text .imgroup img:last-child {
-  margin-right: 0;
+@media (max-width: 1108px) {
+  .section-handwerk .handwerk-text .long-image {
+    width: 100%;
+  }
+  .section-handwerk .handwerk-text .imgroup {
+    flex-wrap: wrap;
+  }
+  .section-handwerk .handwerk-text .imgroup img {
+    width: calc(34% - 13px); /* Calculate 50% width minus margin */
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+  }
+  .section-handwerk .handwerk-text .imgroup img:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .section-handwerk .handwerk-text .imgroup {
+    flex-wrap: wrap;
+  }
+  .section-handwerk .handwerk-text .imgroup img {
+    width: calc(47% - 13px); /* Calculate 50% width minus margin */
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+  }
+  .section-handwerk .handwerk-text .imgroup img:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
+.secondOne {
+  /* Media query for smaller screens */
+  /* Media query for smallest screens */
+}
 .secondOne .first {
   width: 50%;
   margin: 0 auto;
-  height: 540px; /* Adjust height to auto to accommodate variable content height */
+  height: 440px; /* Adjust height to auto to accommodate variable content height */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -398,41 +426,132 @@ body.dark .above-carousel p {
   margin-top: auto; /* This pushes the image-row to the bottom */
 }
 .secondOne .long-image {
+  width: 100%;
   display: block;
   margin: 0 !important;
+  padding: 0 !important;
 }
 .secondOne .golds-container {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
-  width: 1098px;
   justify-content: center;
   margin-bottom: 20px;
 }
 .secondOne .golds {
-  flex: 1;
+  text-align: center;
+  margin: 10px;
 }
 .secondOne .golds img {
   width: 120px;
   height: 120px;
 }
 .secondOne .golds p {
-  width: 176px;
+  width: 170px;
   line-height: 26px;
   font-size: 16px;
   font-weight: 300;
+  padding: 0px;
+  height: 48px;
 }
 .secondOne .golds-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px; /* same height as the images */
+  height: 120px; /* Same height as the images */
+  margin: 10px;
 }
 .secondOne .golds-text h1 {
   margin: 0;
   font-size: 32px;
   font-weight: 700;
 }
+@media (max-width: 1024px) {
+  .secondOne .golds-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .secondOne .golds-text {
+    grid-column: 1/-1; /* Make the text container span across two columns */
+    text-align: center; /* Center the text */
+  }
+  .secondOne .golds {
+    flex: initial;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .secondOne .golds img {
+    width: 100px; /* Adjust image size */
+    height: 100px; /* Adjust image size */
+  }
+}
+@media (max-width: 600px) {
+  .secondOne .golds-container {
+    grid-template-columns: 1fr 1fr; /* Ensure two items per row */
+    grid-auto-rows: auto;
+  }
+  .secondOne .golds-text {
+    grid-column: 1/-1;
+    /* Make the text container span across two columns */
+  }
+  .secondOne .golds:nth-child(2),
+  .secondOne .golds:nth-child(3) {
+    grid-column: span 1; /* Ensure first two images are on the second row */
+  }
+  .secondOne .golds:nth-child(4),
+  .secondOne .golds:nth-child(5) {
+    grid-column: span 1; /* Ensure next two images are on the third row */
+  }
+}
 
+@media (max-width: 1200px) {
+  .section-handwerk .handwerk-text {
+    text-align: center;
+    width: 100%;
+  }
+  .section-handwerk .handwerk-text h1 {
+    font-size: 32px;
+    line-height: 26px;
+    margin-bottom: 16px;
+    margin-top: 119px;
+  }
+  .section-handwerk .handwerk-text h2 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 65px;
+  }
+  .section-handwerk .handwerk-text p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+}
+@media (max-width: 1108px) {
+  .long-image {
+    width: 100%;
+  }
+}
+.special {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .text-padd p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-weight: 300;
+    padding: 0 15% 0 15% !important;
+  }
+}
 * {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -785,6 +904,293 @@ body.dark .above-carousel p {
     height: 25px;
   }
 }
+body {
+  transition: background-color 0.7s, transform 0.7s;
+  background-color: #0f0f0f !important;
+  color: white !important;
+}
+body .golds p {
+  color: rgba(255, 255, 255, 0.51);
+}
+body .above-carousel h1 {
+  color: #fff;
+}
+body .above-carousel p {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .btn {
+  transition: 1s;
+  color: white;
+}
+body .btn:hover {
+  background-color: #753139 !important;
+}
+body .below {
+  background-color: #252525 !important;
+  transition: background-color 0.7s, transform 0.7s;
+}
+body .opacity-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.7s, transform 0.7s;
+}
+body.dark {
+  background-color: #f0f0f0 !important;
+  color: black !important;
+}
+body.dark .opacity-card {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+body.dark .btn {
+  color: white;
+}
+body.dark .golds p {
+  color: rgba(0, 0, 0, 0.51);
+}
+body.dark .below {
+  background-color: #8a8989 !important;
+}
+body.dark .above-carousel h1 {
+  color: black;
+}
+body.dark .above-carousel p {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  overflow: visible;
+  background-color: #b50014;
+  height: 93px;
+  position: relative;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .header {
+    height: 66px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: transform 0.3s ease-out; /* Smooth transition for transform */
+  }
+}
+
+.header.hidden {
+  transform: translateY(-100%); /* Hide the header off-screen */
+}
+
+/* Add padding or margin to body or other elements */
+@media (max-width: 1200px) {
+  body {
+    padding-top: 66px; /* Adjust padding to match header height */
+  }
+}
+.container-header {
+  width: 1200px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .container-header {
+    width: 100%; /* Fluid width for smaller screens */
+    padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .container-header {
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+}
+
+.header a {
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 16px;
+}
+@media (max-width: 1200px) {
+  .header a {
+    margin-right: 10px; /* Reduce margin for smaller screens */
+  }
+}
+
+.logo {
+  z-index: 3;
+  width: 178px;
+  transform: translateY(12%);
+}
+
+.hamburger-menu {
+  display: none; /* Initially hide the hamburger menu */
+  cursor: pointer;
+  height: 24px;
+  width: 30px; /* Set a width for better visibility */
+  z-index: 3; /* Ensure it is on top of other elements */
+}
+
+@media (max-width: 1200px) {
+  .header {
+    height: 66px;
+  }
+  .logo {
+    cursor: pointer;
+    transform: translateY(10%);
+    width: 96px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background-color: #b50014;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    padding: 20px 0;
+    transition: max-height 0.3s ease-out;
+    max-height: 0; /* Start with max-height of 0 */
+    overflow: hidden;
+  }
+  .nav-links.active {
+    display: flex; /* Show when active */
+    max-height: 500px; /* Adjust max height as needed to show the links */
+  }
+  .nav-links.active a {
+    padding: 10px 0;
+  }
+  .hamburger-menu {
+    display: block; /* Show hamburger menu */
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  transition: all 0.3s ease-out;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    height: 66px;
+  }
+  .sticky {
+    background-color: #b50014;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+.below {
+  display: flex;
+  height: auto;
+}
+.below .section {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between; /* Aligns items with space between them */
+  align-items: center;
+  margin: 0 auto;
+}
+.below .section p {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 17px 0 10px 0;
+  text-align: right; /* Align text to the right */
+  font-size: 16px;
+}
+.below .section strong {
+  margin-left: auto;
+  margin-right: 10px; /* Adjust margins to maintain original design */
+}
+.below .section .fa-regular.fa-clock {
+  margin-left: 5px; /* Optional: Add some space between strong and clock icon */
+}
+@media (max-width: 1199px) {
+  .below .section {
+    flex-wrap: wrap;
+  }
+  .below .section p {
+    flex-basis: 100%;
+    text-align: right; /* Align text to the right on smaller screens */
+    margin-right: 0; /* Reset right margin */
+  }
+  .below .section strong {
+    flex-basis: 100%;
+    margin-left: 0; /* Reset left margin */
+    margin-right: 0; /* Reset right margin */
+    order: 1; /* Ensure strong element appears first in smaller screens */
+    display: block; /* Force strong element to break onto a new line */
+    margin-bottom: 5px; /* Optional: Add margin bottom for separation */
+  }
+  .below .section .fa-regular.fa-clock {
+    flex-basis: 100%;
+    margin-left: 0; /* Reset left margin */
+    margin-right: 0; /* Reset right margin */
+    order: 2; /* Ensure clock icon follows strong element */
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide the default input */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider base styles */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red; /* Default color when off */
+  transition: background-color 0.4s;
+  border-radius: 24px; /* Round slider shape */
+  min-width: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white; /* Default color of the thumb */
+  transition: background-color 0.7s, transform 0.7s;
+  border-radius: 50%; /* Rounded shape for the thumb */
+}
+
+/* Styles for the slider when it's checked (active state) */
+input:checked + .slider {
+  background-color: white; /* Change background color when checked */
+}
+
+/* Move the thumb to the right when checked */
+input:checked + .slider:before {
+  background-color: red; /* Change color of the thumb when checked */
+  transform: translateX(26px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -882,56 +1288,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.header {
-  overflow: hidden;
-  background-color: #b50014;
-  height: 93px;
-  position: relative;
-  border-bottom: 2px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header a {
-  font-size: 16px;
-  line-height: 18.75px;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  margin-right: 41px;
-}
-
-.header a:last-child {
-  margin-right: -100px;
-}
-
-.header a:first-child {
-  margin-left: 100px;
-}
-
-.below {
-  display: flex;
-  height: auto;
-  padding: 10px 10px;
-}
-.below p {
-  font-size: 16px;
-  font-weight: 400;
-  align-items: end;
-  margin-left: auto;
-  margin-right: 10px;
-}
-
-.logo {
-  position: absolute;
-  top: -5px;
-  left: 15%;
-  transform: translateX(-50%);
-  width: 10%;
-  z-index: 3;
-}
-
 .image-section {
   height: 75vh;
   position: relative;
@@ -989,7 +1345,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 114px 419px 90px 412px;
   height: auto;
 }
 .section-dark {
@@ -999,8 +1354,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 114px 0 90px 0;
   max-width: 1125px;
   width: 100%;
+  flex-wrap: wrap;
 }
 .section-dark .content {
   max-width: 427px;
@@ -1044,8 +1401,9 @@ body {
   gap: 17px;
 }
 .section-dark .images .main-image {
-  width: 537px;
-  height: 326px;
+  width: 100%;
+  max-width: 537px;
+  height: auto;
 }
 .section-dark .images .thumbnails {
   display: flex;
@@ -1057,70 +1415,43 @@ body {
   object-fit: cover;
 }
 
-@media screen and (max-width: 500px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 1200px) {
+  .section-dark .content-container {
+    flex-direction: column-reverse; /* Column reverse to place images above content */
+    max-width: 700px;
+    margin: 0 auto;
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
   }
-  .header a {
-    margin: 0 0 10px 0;
-    float: none;
+  .section-dark .content-container .buttons {
     display: block;
-    text-align: left;
   }
-  .header a:last-child {
-    margin-bottom: 0;
+  .section-dark .content,
+  .images {
+    text-align: center; /* Center align text inside .content */
+    margin: 0 auto; /* Center .content itself horizontally */
+  }
+}
+@media (max-width: 700px) {
+  .content {
+    max-width: 350px !important;
+  }
+  .content p {
+    max-width: 350px;
+    padding: 0 !important;
+  }
+  .buttons .btn-primary {
+    padding: 12px 30px 13px 30px !important;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .images .main-image {
+    max-width: 336px !important;
+  }
+  .images .thumbnails img {
+    width: 100% !important;
+    height: 100px !important;
+    margin-bottom: 10px;
   }
 }
 /* Base styles for the switch container */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-  margin-right: 298px;
-}
-
-/* Hide the default input */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* Slider base styles */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: red; /* Default color when off */
-  transition: background-color 0.4s;
-  border-radius: 24px; /* Round slider shape */
-}
-
-/* Slider thumb (circle) */
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white; /* Default color of the thumb */
-  transition: background-color 0.7s, transform 0.7s;
-  border-radius: 50%; /* Rounded shape for the thumb */
-}
-
-/* Styles for the slider when it's checked (active state) */
-input:checked + .slider {
-  background-color: white; /* Change background color when checked */
-}
-
-/* Move the thumb to the right when checked */
-input:checked + .slider:before {
-  background-color: red; /* Change color of the thumb when checked */
-  transform: translateX(26px);
-}

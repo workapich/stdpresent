@@ -1,0 +1,253 @@
+@import "colors.scss";
+.header {
+  overflow: visible;
+  background-color: $header-Color;
+  height: 93px;
+  position: relative;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    height: 66px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: transform 0.3s ease-out; /* Smooth transition for transform */
+  }
+}
+
+.header.hidden {
+  transform: translateY(-100%); /* Hide the header off-screen */
+}
+
+/* Add padding or margin to body or other elements */
+@media (max-width: 1200px) {
+  body {
+    padding-top: 66px; /* Adjust padding to match header height */
+  }
+}
+
+.container-header {
+  width: 1200px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    width: 100%; /* Fluid width for smaller screens */
+    padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+}
+
+.header a {
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 16px;
+
+  @media (max-width: 1200px) {
+    margin-right: 10px; /* Reduce margin for smaller screens */
+  }
+}
+
+.logo {
+  z-index: 3;
+  width: 178px;
+  transform: translateY(+12%);
+}
+
+.hamburger-menu {
+  display: none; /* Initially hide the hamburger menu */
+  cursor: pointer;
+  height: 24px;
+  width: 30px; /* Set a width for better visibility */
+  z-index: 3; /* Ensure it is on top of other elements */
+}
+
+@media (max-width: 1200px) {
+  .header {
+    height: 66px;
+  }
+  .logo {
+    cursor: pointer;
+
+    transform: translateY(10%);
+
+    // transform: translateX(-50%);
+
+    width: 96px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background-color: $header-Color;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    padding: 20px 0;
+    transition: max-height 0.3s ease-out;
+    max-height: 0; /* Start with max-height of 0 */
+    overflow: hidden;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when active */
+    max-height: 500px; /* Adjust max height as needed to show the links */
+
+    a {
+      padding: 10px 0;
+    }
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu */
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  transition: all 0.3s ease-out;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    height: 66px;
+  }
+
+  .sticky {
+    background-color: $header-Color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+///nooooo
+///nooooo
+///
+///
+///
+.below {
+  display: flex;
+  height: auto;
+
+  .section {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* Aligns items with space between them */
+    align-items: center;
+    margin: 0 auto;
+
+    p {
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 17px 0 10px 0;
+      text-align: right; /* Align text to the right */
+      font-size: 16px;
+    }
+
+    strong {
+      margin-left: auto;
+      margin-right: 10px; /* Adjust margins to maintain original design */
+    }
+
+    .fa-regular.fa-clock {
+      margin-left: 5px; /* Optional: Add some space between strong and clock icon */
+    }
+
+    @media (max-width: 1199px) {
+      flex-wrap: wrap;
+
+      p {
+        flex-basis: 100%;
+        text-align: right; /* Align text to the right on smaller screens */
+        margin-right: 0; /* Reset right margin */
+      }
+
+      strong {
+        flex-basis: 100%;
+        margin-left: 0; /* Reset left margin */
+        margin-right: 0; /* Reset right margin */
+        order: 1; /* Ensure strong element appears first in smaller screens */
+        display: block; /* Force strong element to break onto a new line */
+        margin-bottom: 5px; /* Optional: Add margin bottom for separation */
+      }
+
+      .fa-regular.fa-clock {
+        flex-basis: 100%;
+        margin-left: 0; /* Reset left margin */
+        margin-right: 0; /* Reset right margin */
+        order: 2; /* Ensure clock icon follows strong element */
+      }
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide the default input */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider base styles */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red; /* Default color when off */
+  transition: background-color 0.4s;
+  border-radius: 24px; /* Round slider shape */
+  min-width: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white; /* Default color of the thumb */
+  transition: background-color 0.7s, transform 0.7s;
+  border-radius: 50%; /* Rounded shape for the thumb */
+}
+
+/* Styles for the slider when it's checked (active state) */
+input:checked + .slider {
+  background-color: white; /* Change background color when checked */
+}
+
+/* Move the thumb to the right when checked */
+input:checked + .slider:before {
+  background-color: red; /* Change color of the thumb when checked */
+  transform: translateX(26px);
+}

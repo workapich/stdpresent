@@ -16,37 +16,105 @@
 </head>
 
 <body onload="loadPreference()">
-    <img src="../logo.png" alt="logo" class="logo">
 
     <div class="header">
-        <a href="#home">Die Metzgerei</a>
-        <a href="#contact">Dry Aged</a>
-        <a href="#about">Fleischversand</a>
-        <a href="#home">Events/Kurse</a>
-        <a href="#contact">Partyservice</a>
-        <a href="#about">Tagesessen</a>
-        <a href="#home">Impressum</a>
-        <a href="#contact">Kontakt</a>
-        <!-- <a href="#about" onclick="downloadPDF()"><i class="fa-regular fa-file-pdf"></i>Download</a> -->
-        <a href="#about" onclick="downloadPDF()"><i class="fa-regular fa-file-pdf"></i>Download</a>
+        <div class="container-header" id="myTopnav">
+            <div class="logo" onclick="topFunction()">
+                <img src="../logo.png" alt="logo" id="logo" class="logo">
+            </div>
+            <div class="nav-links">
+                <a href="#home">Die Metzgerei</a>
+                <a href="#contact">Dry Aged</a>
+                <a href="#about">Fleischversand</a>
+                <a href="#home">Events/Kurse</a>
+                <a href="#contact">Partyservice</a>
+                <a href="#about">Tagesessen</a>
+                <a href="#home">Impressum</a>
+                <a href="#contact">Kontakt</a>
+                <a href="#about" onclick="downloadPDF()"><i class="fa-regular fa-file-pdf"></i>Download</a>
+            </div>
+            <!-- Hamburger icon -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
 
-
-        <!-- <a href="#about" onclick="downloadPDF()"><i class=" fa-regular fa-file-pdf"></i>Download</a> -->
+            </div>
+        </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburgerMenu = document.getElementById('hamburger-menu');
+            var navLinks = document.querySelector('.nav-links');
+
+            hamburgerMenu.addEventListener('click', function () {
+                // Toggle the 'active' class on the navigation links
+                navLinks.classList.toggle('active');
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var lastScrollTop = 0;
+            var header = document.querySelector('.header');
+            var navbarHeight = header.offsetHeight;
+            var isScrolling = false;
+
+            window.addEventListener('scroll', function () {
+                if (window.innerWidth <= 1200) {
+                    isScrolling = true;
+                } else {
+                    isScrolling = false;
+                    header.classList.remove('hidden'); // Ensure header is always shown on larger screens
+                    return;
+                }
+
+                if (!isScrolling) return;
+
+                var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScroll > lastScrollTop && currentScroll > navbarHeight) {
+                    // Scroll down and below header height
+                    header.classList.add('hidden');
+                } else {
+                    // Scroll up or at the top
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = currentScroll;
+            });
+        });
+
+        function topFunction() {
+            if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
+                // Calculate how far to scroll
+                const scrollStep = -window.scrollY / (500 / 15); // Adjust 500 for the duration of the scroll animation
+                requestAnimationFrame(function scrollToTop() {
+                    if (window.scrollY !== 0) {
+                        window.scrollBy(0, scrollStep);
+                        requestAnimationFrame(scrollToTop);
+                    }
+                });
+            }
+        }
+
+
+
+    </script>
     <div class="below">
+        <div class="section">
 
-        <p>
+            <p>
+                <strong> <i class="fa-regular fa-clock"></i> Opentime:</strong>Di. - Fr.: 07:00-13:00 und 15:00-18:30.
+                Sa.: 07:30 - 12:30
+                <label class="switch">
+                    <input type="checkbox" id="toggleSwitch" onchange="myFunction()">
+                    <span class="slider round"></span>
+                </label>
+            </p>
 
-            <i class="fa-regular fa-clock"></i> <strong>Opentime:</strong> Di. - Fr.: 07:00-13:00 und 15:00-18:30. Sa.:
-            07:30 - 12:30
-        </p>
 
 
-        <label class="switch">
-            <input type="checkbox" id="toggleSwitch" onchange="myFunction()">
-            <span class="slider round"></span>
-        </label>
 
+        </div>
 
 
     </div>
@@ -56,7 +124,8 @@
             <div class="left-opacity"></div>
             <div class="right-opacity">
                 <h1>Heiko Brath Metzgermeister</h1>
-                <p>Deutsches Ipsum Dolor deserunt dissentias Grimms Märchen et. Tollit argumentum ius an. Pfannkuchen
+                <p>Deutsches Ipsum Dolor deserunt dissentias Grimms Märchen et. Tollit argumentum ius an.
+                    Pfannkuchen
                     lobortis elaboraret per ne, nam Aperol Spritz probatus pertinax.</p>
             </div>
         </div>
@@ -85,13 +154,16 @@
                 <h1>Dry aged</h1>
                 <h2>Alte Wutz, Dry Aged</h2>
                 <p>
-                    Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna 99
-                    Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi Sprechen
+                    Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore
+                    magna 99
+                    Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi
+                    Sprechen
                     Sie deutsch aliquip ex ea commodo consequat. Wiener Schnitzel aute irure dolor in reprehenderit
                     Guten Tag mollit anim Stuttgart.
                 </p>
                 <p>
-                    id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expectenda
+                    id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm
+                    expectenda
                     nam an, his ei Reise euismod assentior.
                 </p>
                 <div class="buttons">
@@ -130,24 +202,28 @@
     </div>
 
     <div class="section-handwerk">
-        <div class="handwerk-text">
+        <div class="handwerk-text text-padd">
             <h1>Das Handwerk</h1>
             <h2>alles über unsere Hausgemachte Produkte</h2>
             <p>
                 Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna 99
-                Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi Sprechen Sie
+                Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi Sprechen
+                Sie
                 deutsch aliquip ex ea commodo consequat.
             </p>
             <p>
                 Wiener Schnitzel aute irure dolor in Guten Tag mollit anim Stuttgart.
             </p>
             <p>
-                id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam an,
+                id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam
+                an,
                 his ei Reise euismod assentior
             </p>
             <div class="buttons">
                 <button class="btn btn-primary">Das Handwerk</button>
             </div>
+
+
             <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
             <div class="imgroup">
                 <img src="../wurstchen.png" alt="Thumbnail 1">
@@ -158,28 +234,7 @@
         </div>
     </div>
 
-    <div class="section-red">
-        <div class="container-image">
-            <img class="only-image" src="../spice.jpg" alt="Dry Aged Image">
-        </div>
-        <div class="container-text second">
-            <h1>Custome spices for your meat</h1>
-            <h2>Turnbeutel nostrud exercitation ullamco Sprechen Sie deutsch</h2>
-            <p>Odio principes iracundia Müller Rice pri. Ut vel solum mandamus, Kartoffelkopf natum adversarium ei ius,
-                diam Schmetterling honestatis eum.<br><br>
-                Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore
-                magna 99 Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi
-                Sprechen Sie deutsch aliquip ex ea commodo consequat.
-            </p>
-        </div>
-    </div>
-
-    <div class="section-paralax">
-        <h1>Fleischversand</h1>
-        <div class="buttons">
-            <button class="btn btn-primary">Jetzt bestellen</button>
-        </div>
-    </div>
+    <!-- here -->
 
 
     <div class="section-handwerk secondOne">
@@ -196,15 +251,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="image-row">
-                    <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
-                </div>
+
             </div>
         </div>
     </div>
 
 
-
+    <div class="image-row special">
+        <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
+    </div>
 
     <div class="section-handwerk secondOne">
         <div class="handwerk-text secondOne">
@@ -216,36 +271,34 @@
                         </div>
                         <div class="golds">
                             <img src="../zlatnik1.png" alt="Thumbnail 1">
-                            <p>Tollit argumentum genau
-                                Saepe lobortis</p>
+                            <p>Tollit argumentum genau Saepe lobortis</p>
                         </div>
 
                         <div class="golds">
-                            <img src="../zlatnik1.png" alt="Thumbnail 1">
-                            <p>Tollit argumentum genau
-                                Saepe lobortis</p>
+                            <img src="../nagrada2.png" alt="Thumbnail 1">
+                            <p>Schneewittchen denique</p>
                         </div>
                         <div class="golds">
-                            <img src="../zlatnik1.png" alt="Thumbnail 1">
-                            <p>Tollit argumentum genau
-                                Saepe lobortis</p>
+                            <img src="../nagrada3.png" alt="Thumbnail 1">
+                            <p>Grimms Märchen
+                                expetenda</p>
                         </div>
                         <div class="golds">
-                            <img src="../zlatnik1.png" alt="Thumbnail 1">
-                            <p>Tollit argumentum genau
-                                Saepe lobortis</p>
+                            <img src="../nagrada4.png" alt="Thumbnail 1">
+                            <p>Mettwurst mei
+                                ullum gloriatur.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="image-row">
-                    <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
-                </div>
+
             </div>
         </div>
     </div>
 
-
+    <div class="image-row special">
+        <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
+    </div>
     <div class="container-pagination">
         <div class="above-carousel">
             <p>Empfehlungs</p>
@@ -261,7 +314,8 @@
                     <img class="something-new" src="../zvezdice.png" alt="3" />
                     <div class="text">
 
-                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
+                            labore
                             et
                             dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
                         <p>Halling Tobias</p>
@@ -275,7 +329,8 @@
                     <img class="something-new" src="../zvezdice.png" alt="3" />
                     <div class="text">
 
-                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
+                            labore
                             et
                             dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
                         <p>Halling Tobias</p>
@@ -289,7 +344,8 @@
                     <img class="something-new" src="../zvezdice.png" alt="3" />
                     <div class="text">
 
-                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
+                            labore
                             et
                             dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
                         <p>Halling Tobias</p>

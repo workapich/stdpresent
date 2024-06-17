@@ -1,0 +1,303 @@
+body {
+  transition: background-color 0.7s, transform 0.7s;
+  background-color: #0f0f0f !important;
+  color: white !important;
+}
+body .golds p {
+  color: rgba(255, 255, 255, 0.51);
+}
+body .above-carousel h1 {
+  color: #fff;
+}
+body .above-carousel p {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .btn {
+  transition: 1s;
+  color: white;
+}
+body .btn:hover {
+  background-color: #753139 !important;
+}
+body .below {
+  background-color: #252525 !important;
+  transition: background-color 0.7s, transform 0.7s;
+}
+body .opacity-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.7s, transform 0.7s;
+}
+body.dark {
+  background-color: #f0f0f0 !important;
+  color: black !important;
+}
+body.dark .opacity-card {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+body.dark .btn {
+  color: white;
+}
+body.dark .golds p {
+  color: rgba(0, 0, 0, 0.51);
+}
+body.dark .below {
+  background-color: #8a8989 !important;
+}
+body.dark .above-carousel h1 {
+  color: black;
+}
+body.dark .above-carousel p {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.section-handwerk .handwerk-text {
+  text-align: center;
+  width: 100%;
+}
+.section-handwerk .handwerk-text h1 {
+  font-size: 32px;
+  line-height: 26px;
+  margin-bottom: 16px;
+  margin-top: 119px;
+}
+.section-handwerk .handwerk-text h2 {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 65px;
+}
+.section-handwerk .handwerk-text p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-weight: 300;
+  padding: 0 33% 0 33%;
+}
+.section-handwerk .handwerk-text .btn {
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.section-handwerk .handwerk-text .btn-primary {
+  background-color: #a62120;
+  margin: 30px 0 82px 0;
+  color: #fff;
+  border: 1px solid white;
+  padding: 12px 36px 13px 34px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.section-handwerk .handwerk-text .long-image {
+  margin-bottom: 46px;
+}
+.section-handwerk .handwerk-text .imgroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section-handwerk .handwerk-text .imgroup img {
+  width: 262px;
+  margin-right: 13px;
+  margin-bottom: 20px; /* Adjust margin bottom as needed */
+}
+@media (max-width: 1108px) {
+  .section-handwerk .handwerk-text .long-image {
+    width: 100%;
+  }
+  .section-handwerk .handwerk-text .imgroup {
+    flex-wrap: wrap;
+  }
+  .section-handwerk .handwerk-text .imgroup img {
+    width: calc(34% - 13px); /* Calculate 50% width minus margin */
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+  }
+  .section-handwerk .handwerk-text .imgroup img:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .section-handwerk .handwerk-text .imgroup {
+    flex-wrap: wrap;
+  }
+  .section-handwerk .handwerk-text .imgroup img {
+    width: calc(47% - 13px); /* Calculate 50% width minus margin */
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+  }
+  .section-handwerk .handwerk-text .imgroup img:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+.secondOne {
+  /* Media query for smaller screens */
+  /* Media query for smallest screens */
+}
+.secondOne .first {
+  width: 50%;
+  margin: 0 auto;
+  height: 440px; /* Adjust height to auto to accommodate variable content height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.secondOne .content-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+.secondOne .firstone,
+.secondOne .secondone {
+  display: inline-block;
+  vertical-align: middle;
+}
+.secondOne .secondone h2 {
+  padding: 20px;
+  margin-bottom: 0 !important;
+  font-weight: 700;
+  font-size: 32px !important;
+  line-height: 42px;
+}
+.secondOne .secondone {
+  text-align: left;
+  margin-left: 130px;
+}
+.secondOne .secondone button {
+  margin-bottom: 0 !important;
+  margin-left: 10px !important;
+}
+.secondOne .image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto; /* This pushes the image-row to the bottom */
+}
+.secondOne .long-image {
+  width: 100%;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.secondOne .golds-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.secondOne .golds {
+  text-align: center;
+  margin: 10px;
+}
+.secondOne .golds img {
+  width: 120px;
+  height: 120px;
+}
+.secondOne .golds p {
+  width: 170px;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0px;
+  height: 48px;
+}
+.secondOne .golds-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px; /* Same height as the images */
+  margin: 10px;
+}
+.secondOne .golds-text h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .secondOne .golds-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .secondOne .golds-text {
+    grid-column: 1/-1; /* Make the text container span across two columns */
+    text-align: center; /* Center the text */
+  }
+  .secondOne .golds {
+    flex: initial;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .secondOne .golds img {
+    width: 100px; /* Adjust image size */
+    height: 100px; /* Adjust image size */
+  }
+}
+@media (max-width: 600px) {
+  .secondOne .golds-container {
+    grid-template-columns: 1fr 1fr; /* Ensure two items per row */
+    grid-auto-rows: auto;
+  }
+  .secondOne .golds-text {
+    grid-column: 1/-1;
+    /* Make the text container span across two columns */
+  }
+  .secondOne .golds:nth-child(2),
+  .secondOne .golds:nth-child(3) {
+    grid-column: span 1; /* Ensure first two images are on the second row */
+  }
+  .secondOne .golds:nth-child(4),
+  .secondOne .golds:nth-child(5) {
+    grid-column: span 1; /* Ensure next two images are on the third row */
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-handwerk .handwerk-text {
+    text-align: center;
+    width: 100%;
+  }
+  .section-handwerk .handwerk-text h1 {
+    font-size: 32px;
+    line-height: 26px;
+    margin-bottom: 16px;
+    margin-top: 119px;
+  }
+  .section-handwerk .handwerk-text h2 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 65px;
+  }
+  .section-handwerk .handwerk-text p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+}
+@media (max-width: 1108px) {
+  .long-image {
+    width: 100%;
+  }
+}
+.special {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .text-padd p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-weight: 300;
+    padding: 0 15% 0 15% !important;
+  }
+}
