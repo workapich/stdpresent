@@ -25,7 +25,6 @@ $background-color_2: white;
     align-items: center;
     h1 {
       font-weight: 700;
-      // color: #fff;
       font-size: 32px;
     }
 
@@ -35,7 +34,6 @@ $background-color_2: white;
       font-weight: 700;
 
       font-size: 18px;
-      // color: rgba(255, 255, 255, 0.4);
     }
 
     .buttons {
@@ -109,6 +107,58 @@ $background-color_2: white;
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .slider-right {
+    top: 90.5% !important;
+    right: 20% !important;
+  }
+  .slider-left {
+    top: 92.5% !important;
+    left: 20% !important;
+  }
+
+  .slider-single.proactive {
+    opacity: 0 !important;
+  }
+
+  .slider-single.preactive {
+    opacity: 0 !important;
+  }
+  .slider-container {
+    position: relative;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+  }
+
+  .slider-single.active p {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  .slider-content {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .slider-single.active {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
 .image-below {
   position: absolute;
   bottom: -22px;
@@ -123,7 +173,7 @@ $background-color_2: white;
 .text {
   margin: 24px 40px 0 40px;
   text-align: center;
-  width: 342px;
+  width: 100%;
 }
 .slider-single.active {
   opacity: 1;
@@ -187,11 +237,12 @@ $background-color_2: white;
   position: absolute;
   z-index: 3;
   display: block;
-  top: 50%;
+  top: 47.5%;
+
   color: $color_3;
-  transform: translateY(-50%);
+  transform: translateX(-50%);
   cursor: pointer;
-  margin: 0 70px;
+  margin: 0 35px;
   background-color: $background-color_2;
   border-radius: 100px;
   padding: 7px 0 6px 0;

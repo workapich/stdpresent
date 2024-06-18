@@ -4,21 +4,14 @@ $thirdBox-Color: #a62120;
 $header-Color: #b50014;
 $border-button: #ff0000;
 $background-Color: #0f0f0f;
-$background-Color: #f0f0f0;
-
-$background-color-default: #0f0f0f;
-$background-color-dark: #f0f0f0;
-
-$background-color-default: #0f0f0f;
-$background-color-dark: #f0f0f0;
+$background-Color-Dark: #f0f0f0;
 $base-color: #252525;
 $base-color-light: #8a8989;
 
 body {
-  // transition: background-color 1s, color 1s;
   transition: background-color 0.7s, transform 0.7s;
 
-  background-color: $background-color-default !important;
+  background-color: $background-Color !important;
   color: white !important;
 
   .golds p {
@@ -53,7 +46,7 @@ body {
   }
 
   &.dark {
-    background-color: $background-color-dark !important;
+    background-color: $background-Color-Dark !important;
     color: black !important;
     .opacity-card {
       background-color: rgba(255, 255, 255, 0.3);

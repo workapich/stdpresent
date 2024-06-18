@@ -11,16 +11,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Projekat</title>
 </head>
 
 <body onload="loadPreference()">
 
+
+
     <div class="header">
         <div class="container-header" id="myTopnav">
             <div class="logo" onclick="topFunction()">
-                <img src="../logo.png" alt="logo" id="logo" class="logo">
+                <img src="../img/logo.png" alt="logo" id="logo" class="logo">
             </div>
             <div class="nav-links">
                 <a href="#home">Die Metzgerei</a>
@@ -40,7 +42,347 @@
             </div>
         </div>
     </div>
+
+    <div class="below">
+        <div class="section">
+
+            <p>
+                <strong> <i class="fa-regular fa-clock"></i> Opentime:</strong>Di. - Fr.: 07:00-13:00 und 15:00-18:30.
+                Sa.: 07:30 - 12:30
+                <label class="switch">
+                    <input type="checkbox" id="toggleSwitch" onchange="myFunction()">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <section class="image-section">
+        <div class="opacity-card">
+            <div class="left-opacity"></div>
+            <div class="right-opacity">
+                <h1>Heiko Brath Metzgermeister</h1>
+                <p>Deutsches Ipsum Dolor deserunt dissentias Grimms Märchen et. Tollit argumentum ius an.
+                    Pfannkuchen
+                    lobortis elaboraret per ne, nam Aperol Spritz probatus pertinax.</p>
+            </div>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../img/BRATH.png" alt="Slide Image 1"></div>
+                <div class="swiper-slide"><img src="../img/BRATH.png" alt="Slide Image 2"></div>
+                <div class="swiper-slide"><img src="../img/BRATH.png" alt="Slide Image 3"></div>
+                <div class="swiper-slide"><img src="../img/BRATH.png" alt="Slide Image 4"></div>
+                <div class="swiper-slide"><img src="../img/BRATH.png" alt="Slide Image 5"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-wrapper">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="opacity-below">
+
+    </div>
+
+    <div class="section section-dark">
+        <div class="content-container">
+            <div class="content">
+                <h1>Dry aged</h1>
+                <h2>Alte Wutz, Dry Aged</h2>
+                <p>
+                    Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore
+                    magna 99
+                    Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi
+                    Sprechen
+                    Sie deutsch aliquip ex ea commodo consequat. Wiener Schnitzel aute irure dolor in reprehenderit
+                    Guten Tag mollit anim Stuttgart.
+                </p>
+                <p>
+                    id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm
+                    expectenda
+                    nam an, his ei Reise euismod assentior.
+                </p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Dry aged</button>
+                    <button class="btn btn-primary">Alte Wutz</button>
+                </div>
+            </div>
+            <div class="images">
+                <img class="main-image" src="../img/pictureFor2.png" alt="Dry Aged Image">
+                <div class="thumbnails">
+                    <img src="../img/pictureFor1.png" alt="Thumbnail 1">
+                    <img src="../img/pictureMain.png" alt="Thumbnail 2">
+                    <img src="../img/pictureFor3.png" alt="Thumbnail 3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-red">
+        <div class="container-text first">
+            <h1>Buchen Sie den
+                Grillkurs jetzt
+            </h1>
+            <ul>
+                <li>professioneller Lehrer</li>
+                <li>ausgezeichneter Metzger</li>
+                <li>1 Tag</li>
+                <li>lernen Sie die Kunst des Grillens</li>
+            </ul>
+            <div class="buttons">
+                <button class="btn btn-primary">Dry aged</button>
+            </div>
+        </div>
+        <div class="container-image">
+            <img class="only-image" src="../img/pictureSection.jpg" alt="Dry Aged Image">
+        </div>
+    </div>
+
+    <div class="section-handwerk">
+        <div class="handwerk-text text-padd">
+            <h1>Das Handwerk</h1>
+            <h2>alles über unsere Hausgemachte Produkte</h2>
+            <p>
+                Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna 99
+                Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi Sprechen
+                Sie
+                deutsch aliquip ex ea commodo consequat.
+            </p>
+            <p>
+                Wiener Schnitzel aute irure dolor in Guten Tag mollit anim Stuttgart.
+            </p>
+            <p>
+                id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam
+                an,
+                his ei Reise euismod assentior
+            </p>
+            <div class="buttons">
+                <button class="btn btn-primary">Das Handwerk</button>
+            </div>
+
+
+            <img src="../img/vonal 1.png" alt="line-picture" class="long-image dynamic-image">
+            <div class="imgroup">
+                <img src="../img/wurstchen.png" alt="Thumbnail 1">
+                <img src="../img/hanchen.png" alt="Thumbnail 2">
+                <img src="../img/schwein.png" alt="Thumbnail 3">
+                <img src="../img/rind.png" alt="Thumbnail 4">
+            </div>
+        </div>
+    </div>
+
+    <!-- here -->
+
+
+    <div class="section-red">
+        <div class="container-image">
+            <img class="only-image" src="../img/spice.jpg" alt="Dry Aged Image">
+        </div>
+        <div class="container-text second">
+            <h1>Custome spices for your meat</h1>
+            <h2>Turnbeutel nostrud exercitation ullamco Sprechen Sie deutsch</h2>
+            <p>Odio principes iracundia Müller Rice pri. Ut vel solum mandamus, Kartoffelkopf natum adversarium ei ius,
+                diam Schmetterling honestatis eum.<br><br>
+                Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore
+                magna 99 Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi
+                Sprechen Sie deutsch aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+
+    <div class="section-paralax">
+        <h1>Fleischversand</h1>
+        <div class="buttons">
+            <button class="btn btn-primary">Jetzt bestellen</button>
+        </div>
+    </div>
+
+
+
+    <div class="section-handwerk secondOne">
+        <div class="handwerk-text secondOne">
+            <div class="first">
+                <div class="content-row">
+                    <div class="firstone">
+                        <img src="../img/secondLogo.png" alt="Thumbnail 1" class="dynamic-image">
+                    </div>
+                    <div class="secondone">
+                        <h2>Metzgerei Brath ist Mitglied im Genussnetzwerk</h2>
+                        <div class="buttons">
+                            <button class="btn btn-primary">Das Handwerk</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="image-row special">
+        <img src="../img/vonal 1.png" alt="line-picture" class="long-image dynamic-image">
+    </div>
+
+    <div class="section-handwerk secondOne">
+        <div class="handwerk-text secondOne">
+            <div class="first">
+                <div class="content-row">
+                    <div class="golds-container">
+                        <div class="golds-text">
+                            <h1>Auszeichnungen</h1>
+                        </div>
+                        <div class="golds">
+                            <img src="../img/zlatnik1.png" alt="Thumbnail 1">
+                            <p>Tollit argumentum genau Saepe lobortis</p>
+                        </div>
+
+                        <div class="golds">
+                            <img src="../img/nagrada2.png" alt="Thumbnail 1">
+                            <p>Schneewittchen denique</p>
+                        </div>
+                        <div class="golds">
+                            <img src="../img/nagrada3.png" alt="Thumbnail 1">
+                            <p>Grimms Märchen
+                                expetenda</p>
+                        </div>
+                        <div class="golds">
+                            <img src="../img/nagrada4.png" alt="Thumbnail 1">
+                            <p>Mettwurst mei
+                                ullum gloriatur.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="image-row special">
+        <img src="../img/vonal 1.png" alt="line-picture" class="long-image dynamic-image">
+    </div>
+    <div class="container-pagination">
+        <div class="above-carousel">
+            <p>Empfehlungs</p>
+            <h1>Was die Leute über uns sagen</h1>
+        </div>
+
+        <div class="slider-container">
+
+            <div class="slider-content">
+
+                <div class="slider-single">
+                    <img class="something-new" src="../img/coffe.png" alt="3" />
+                    <img class="something-new" src="../img/zvezdice.png" alt="3" />
+                    <div class="text">
+
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
+                            labore
+                            et
+                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+                        <p>Halling Tobias</p>
+                        <p>Koch1</p>
+                    </div>
+                    <img class="image-below" src="../img/znak.png" alt="3" />
+
+                </div>
+                <div class="slider-single">
+                    <img class="something-new" src="../img/coffe.png" alt="3" />
+                    <img class="something-new" src="../img/zvezdice.png" alt="3" />
+                    <div class="text">
+
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
+                            labore
+                            et
+                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+                        <p>Halling Tobias</p>
+                        <p>Koch2</p>
+                    </div>
+                    <img class="image-below" src="../img/znak.png" alt="3" />
+
+                </div>
+                <div class="slider-single">
+                    <img class="something-new" src="../img/coffe.png" alt="3" />
+                    <img class="something-new" src="../img/zvezdice.png" alt="3" />
+                    <div class="text">
+
+                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
+                            labore
+                            et
+                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+                        <p>Halling Tobias</p>
+                        <p>Koch3</p>
+                    </div>
+                    <img class="image-below" src="../img/znak.png" alt="3" />
+
+                </div>
+            </div>
+        </div>
+
+        <div class="above-carousel">
+            <div class="buttons">
+                <button class="btn btn-primary">Alle Berichte</button>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+
+
+
+    <footer class="footer">
+        <div class="footer-column first">
+            <p>
+                <img src="../img/locationGood.png" alt="">
+                <span>Klauprechtstraße 25 <br>76137 Karlsruhe Germany</span>
+            </p>
+            <p>
+                <img src="../img/phoneGood.png" alt="">
+                <span>+49 721 358060</span>
+            </p>
+            <p>
+                <img src="../img/emailGood.png" alt="">
+                <span>info@partyservice-brath.de</span>
+            </p>
+        </div>
+        <div class="footer-column">
+            <img src="../img/Group.png" alt="Image" class="grup">
+        </div>
+        <div class="footer-column last">
+            <span>Besuchen Sie uns auf:</span>
+            <div>
+                <img src="../img/Group 610.png" alt="Image 1">
+                <img src="../img/Group 610.png" alt="Image 2">
+                <img src="../img/Group 610.png" alt="Image 3">
+                <img src="../img/Group 610.png" alt="Image 4">
+            </div>
+        </div>
+    </footer>
+    <div class="footer-line">
+        <div class="first">
+            © 2020 by Metzgerei Heiko Brath GmbH, Deutschland
+        </div>
+        <div class="second">
+            Code and design by <span>StudioPresent</span>
+        </div>
+    </div>
+
+
     <script>
+
         document.addEventListener('DOMContentLoaded', function () {
             var hamburgerMenu = document.getElementById('hamburger-menu');
             var navLinks = document.querySelector('.nav-links');
@@ -95,318 +437,35 @@
                 });
             }
         }
+        // Flag to track if SweetAlert has been shown
+        var sweetAlertShown = false;
 
+        // Function to handle scroll event
+        function handleScroll() {
+            // Get the scroll position
+            var dsoctop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+            if (dsoctop > 2000 && !sweetAlertShown) {
+                sweetAlertShown = true;
+
+                // Show SweetAlert
+                Swal.fire({
+                    icon: "error",
+                    title: "Before you scroll down",
+                    text: "Maybe consider login in ? ",
+
+                });
+
+                // Optionally, remove the scroll event listener after showing SweetAlert once
+                window.removeEventListener('scroll', handleScroll);
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
 
 
     </script>
-    <div class="below">
-        <div class="section">
-
-            <p>
-                <strong> <i class="fa-regular fa-clock"></i> Opentime:</strong>Di. - Fr.: 07:00-13:00 und 15:00-18:30.
-                Sa.: 07:30 - 12:30
-                <label class="switch">
-                    <input type="checkbox" id="toggleSwitch" onchange="myFunction()">
-                    <span class="slider round"></span>
-                </label>
-            </p>
-
-
-
-
-        </div>
-
-
-    </div>
-
-    <section class="image-section">
-        <div class="opacity-card">
-            <div class="left-opacity"></div>
-            <div class="right-opacity">
-                <h1>Heiko Brath Metzgermeister</h1>
-                <p>Deutsches Ipsum Dolor deserunt dissentias Grimms Märchen et. Tollit argumentum ius an.
-                    Pfannkuchen
-                    lobortis elaboraret per ne, nam Aperol Spritz probatus pertinax.</p>
-            </div>
-        </div>
-
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 1"></div>
-                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 2"></div>
-                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 3"></div>
-                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 4"></div>
-                <div class="swiper-slide"><img src="../BRATH.png" alt="Slide Image 5"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-
-            <div class="swiper-button-wrapper">
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-
-            </div>
-        </div>
-    </section>
-
-    <div class="section section-dark">
-        <div class="content-container">
-            <div class="content">
-                <h1>Dry aged</h1>
-                <h2>Alte Wutz, Dry Aged</h2>
-                <p>
-                    Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore
-                    magna 99
-                    Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi
-                    Sprechen
-                    Sie deutsch aliquip ex ea commodo consequat. Wiener Schnitzel aute irure dolor in reprehenderit
-                    Guten Tag mollit anim Stuttgart.
-                </p>
-                <p>
-                    id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm
-                    expectenda
-                    nam an, his ei Reise euismod assentior.
-                </p>
-                <div class="buttons">
-                    <button class="btn btn-primary">Dry aged</button>
-                    <button class="btn btn-primary">Alte Wutz</button>
-                </div>
-            </div>
-            <div class="images">
-                <img class="main-image" src="../pictureFor2.png" alt="Dry Aged Image">
-                <div class="thumbnails">
-                    <img src="../pictureFor1.png" alt="Thumbnail 1">
-                    <img src="../pictureMain.png" alt="Thumbnail 2">
-                    <img src="../pictureFor3.png" alt="Thumbnail 3">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-red">
-        <div class="container-text first">
-            <h1>Buchen Sie den
-                Grillkurs jetzt
-            </h1>
-            <ul>
-                <li>professioneller Lehrer</li>
-                <li>ausgezeichneter Metzger</li>
-                <li>1 Tag</li>
-                <li>lernen Sie die Kunst des Grillens</li>
-            </ul>
-            <div class="buttons">
-                <button class="btn btn-primary">Dry aged</button>
-            </div>
-        </div>
-        <div class="container-image">
-            <img class="only-image" src="../pictureSection.jpg" alt="Dry Aged Image">
-        </div>
-    </div>
-
-    <div class="section-handwerk">
-        <div class="handwerk-text text-padd">
-            <h1>Das Handwerk</h1>
-            <h2>alles über unsere Hausgemachte Produkte</h2>
-            <p>
-                Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna 99
-                Luftballons Ut enim ad minim veniam, Turnbeutel nostrud exercitation ullamco laboris nisi Sprechen
-                Sie
-                deutsch aliquip ex ea commodo consequat.
-            </p>
-            <p>
-                Wiener Schnitzel aute irure dolor in Guten Tag mollit anim Stuttgart.
-            </p>
-            <p>
-                id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam
-                an,
-                his ei Reise euismod assentior
-            </p>
-            <div class="buttons">
-                <button class="btn btn-primary">Das Handwerk</button>
-            </div>
-
-
-            <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
-            <div class="imgroup">
-                <img src="../wurstchen.png" alt="Thumbnail 1">
-                <img src="../hanchen.png" alt="Thumbnail 2">
-                <img src="../schwein.png" alt="Thumbnail 3">
-                <img src="../rind.png" alt="Thumbnail 4">
-            </div>
-        </div>
-    </div>
-
-    <!-- here -->
-
-
-    <div class="section-handwerk secondOne">
-        <div class="handwerk-text secondOne">
-            <div class="first">
-                <div class="content-row">
-                    <div class="firstone">
-                        <img src="../secondLogo.png" alt="Thumbnail 1" class="dynamic-image">
-                    </div>
-                    <div class="secondone">
-                        <h2>Metzgerei Brath ist Mitglied im Genussnetzwerk</h2>
-                        <div class="buttons">
-                            <button class="btn btn-primary">Das Handwerk</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="image-row special">
-        <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
-    </div>
-
-    <div class="section-handwerk secondOne">
-        <div class="handwerk-text secondOne">
-            <div class="first">
-                <div class="content-row">
-                    <div class="golds-container">
-                        <div class="golds-text">
-                            <h1>Auszeichnungen</h1>
-                        </div>
-                        <div class="golds">
-                            <img src="../zlatnik1.png" alt="Thumbnail 1">
-                            <p>Tollit argumentum genau Saepe lobortis</p>
-                        </div>
-
-                        <div class="golds">
-                            <img src="../nagrada2.png" alt="Thumbnail 1">
-                            <p>Schneewittchen denique</p>
-                        </div>
-                        <div class="golds">
-                            <img src="../nagrada3.png" alt="Thumbnail 1">
-                            <p>Grimms Märchen
-                                expetenda</p>
-                        </div>
-                        <div class="golds">
-                            <img src="../nagrada4.png" alt="Thumbnail 1">
-                            <p>Mettwurst mei
-                                ullum gloriatur.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-    <div class="image-row special">
-        <img src="../vonal 1.png" alt="line-picture" class="long-image dynamic-image">
-    </div>
-    <div class="container-pagination">
-        <div class="above-carousel">
-            <p>Empfehlungs</p>
-            <h1>Was die Leute über uns sagen</h1>
-        </div>
-
-        <div class="slider-container">
-
-            <div class="slider-content">
-
-                <div class="slider-single">
-                    <img class="something-new" src="../coffe.png" alt="3" />
-                    <img class="something-new" src="../zvezdice.png" alt="3" />
-                    <div class="text">
-
-                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
-                            labore
-                            et
-                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
-                        <p>Halling Tobias</p>
-                        <p>Koch1</p>
-                    </div>
-                    <img class="image-below" src="../znak.png" alt="3" />
-
-                </div>
-                <div class="slider-single">
-                    <img class="something-new" src="../coffe.png" alt="3" />
-                    <img class="something-new" src="../zvezdice.png" alt="3" />
-                    <div class="text">
-
-                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
-                            labore
-                            et
-                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
-                        <p>Halling Tobias</p>
-                        <p>Koch2</p>
-                    </div>
-                    <img class="image-below" src="../znak.png" alt="3" />
-
-                </div>
-                <div class="slider-single">
-                    <img class="something-new" src="../coffe.png" alt="3" />
-                    <img class="something-new" src="../zvezdice.png" alt="3" />
-                    <div class="text">
-
-                        <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut
-                            labore
-                            et
-                            dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
-                        <p>Halling Tobias</p>
-                        <p>Koch3</p>
-                    </div>
-                    <img class="image-below" src="../znak.png" alt="3" />
-
-                </div>
-            </div>
-        </div>
-
-        <div class="above-carousel">
-            <div class="buttons">
-                <button class="btn btn-primary">Alle Berichte</button>
-            </div>
-        </div>
-
-
-
-    </div>
-    <script src="script.js"></script>
-
-
-
-    <footer class="footer">
-        <div class="footer-column first">
-            <p>
-                <img src="../locationGood.png" alt="">
-                <span>Klauprechtstraße 25 <br>76137 Karlsruhe Germany</span>
-            </p>
-            <p>
-                <img src="../phoneGood.png" alt="">
-                <span>+49 721 358060</span>
-            </p>
-            <p>
-                <img src="../emailGood.png" alt="">
-                <span>info@partyservice-brath.de</span>
-            </p>
-        </div>
-        <div class="footer-column">
-            <img src="../Group.png" alt="Image" class="grup">
-        </div>
-        <div class="footer-column last">
-            <span>Besuchen Sie uns auf:</span>
-            <div>
-                <img src="../Group 610.png" alt="Image 1">
-                <img src="../Group 610.png" alt="Image 2">
-                <img src="../Group 610.png" alt="Image 3">
-                <img src="../Group 610.png" alt="Image 4">
-            </div>
-        </div>
-    </footer>
-    <div class="footer-line">
-        <div class="first">
-            © 2020 by Metzgerei Heiko Brath GmbH, Deutschland
-        </div>
-        <div class="second">
-            Code and design by <span>StudioPresent</span>
-        </div>
-    </div>
-
 
 </body>
 

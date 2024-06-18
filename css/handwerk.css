@@ -50,9 +50,15 @@ body.dark .above-carousel p {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.long-image {
+  margin-bottom: 46px;
+  margin-top: 46px;
+}
+
 .section-handwerk .handwerk-text {
   text-align: center;
   width: 100%;
+  margin-top: 100px;
 }
 .section-handwerk .handwerk-text h1 {
   font-size: 32px;
@@ -87,18 +93,16 @@ body.dark .above-carousel p {
   font-weight: 400;
   font-size: 16px;
 }
-.section-handwerk .handwerk-text .long-image {
-  margin-bottom: 46px;
-}
 .section-handwerk .handwerk-text .imgroup {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 100px;
 }
 .section-handwerk .handwerk-text .imgroup img {
   width: 262px;
   margin-right: 13px;
-  margin-bottom: 20px; /* Adjust margin bottom as needed */
+  margin-bottom: 20px;
 }
 @media (max-width: 1108px) {
   .section-handwerk .handwerk-text .long-image {
@@ -108,8 +112,8 @@ body.dark .above-carousel p {
     flex-wrap: wrap;
   }
   .section-handwerk .handwerk-text .imgroup img {
-    width: calc(34% - 13px); /* Calculate 50% width minus margin */
-    margin-bottom: 20px; /* Adjust margin bottom as needed */
+    width: calc(34% - 13px);
+    margin-bottom: 20px;
   }
   .section-handwerk .handwerk-text .imgroup img:nth-child(2n) {
     margin-right: 0;
@@ -120,22 +124,18 @@ body.dark .above-carousel p {
     flex-wrap: wrap;
   }
   .section-handwerk .handwerk-text .imgroup img {
-    width: calc(47% - 13px); /* Calculate 50% width minus margin */
-    margin-bottom: 20px; /* Adjust margin bottom as needed */
+    width: calc(47% - 13px);
+    margin-bottom: 20px;
   }
   .section-handwerk .handwerk-text .imgroup img:nth-child(2n) {
     margin-right: 0;
   }
 }
 
-.secondOne {
-  /* Media query for smaller screens */
-  /* Media query for smallest screens */
-}
 .secondOne .first {
   width: 50%;
   margin: 0 auto;
-  height: 440px; /* Adjust height to auto to accommodate variable content height */
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,15 +164,30 @@ body.dark .above-carousel p {
   margin-left: 130px;
 }
 .secondOne .secondone button {
-  margin-bottom: 0 !important;
   margin-left: 10px !important;
+}
+@media (max-width: 768px) {
+  .secondOne .content-row {
+    flex-direction: column;
+  }
+  .secondOne .secondone {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .secondOne .secondone button {
+    margin-left: 0 !important;
+  }
+  .secondOne .firstone img {
+    width: 100%;
+  }
 }
 .secondOne .image-row {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: auto; /* This pushes the image-row to the bottom */
+  margin-top: auto;
 }
 .secondOne .long-image {
   width: 100%;
@@ -207,7 +222,7 @@ body.dark .above-carousel p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px; /* Same height as the images */
+  height: 120px;
   margin: 10px;
 }
 .secondOne .golds-text h1 {
@@ -222,8 +237,8 @@ body.dark .above-carousel p {
     gap: 20px;
   }
   .secondOne .golds-text {
-    grid-column: 1/-1; /* Make the text container span across two columns */
-    text-align: center; /* Center the text */
+    grid-column: 1/-1;
+    text-align: center;
   }
   .secondOne .golds {
     flex: initial;
@@ -233,26 +248,25 @@ body.dark .above-carousel p {
     align-items: center;
   }
   .secondOne .golds img {
-    width: 100px; /* Adjust image size */
-    height: 100px; /* Adjust image size */
+    width: 100px;
+    height: 100px;
   }
 }
 @media (max-width: 600px) {
   .secondOne .golds-container {
-    grid-template-columns: 1fr 1fr; /* Ensure two items per row */
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
   }
   .secondOne .golds-text {
     grid-column: 1/-1;
-    /* Make the text container span across two columns */
   }
   .secondOne .golds:nth-child(2),
   .secondOne .golds:nth-child(3) {
-    grid-column: span 1; /* Ensure first two images are on the second row */
+    grid-column: span 1;
   }
   .secondOne .golds:nth-child(4),
   .secondOne .golds:nth-child(5) {
-    grid-column: span 1; /* Ensure next two images are on the third row */
+    grid-column: span 1;
   }
 }
 
@@ -269,7 +283,6 @@ body.dark .above-carousel p {
   }
   .section-handwerk .handwerk-text h2 {
     font-size: 22px;
-    line-height: 26px;
     margin-bottom: 65px;
   }
   .section-handwerk .handwerk-text p {

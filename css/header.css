@@ -67,19 +67,18 @@ body.dark .above-carousel p {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure it's above other content */
-    transition: transform 0.3s ease-out; /* Smooth transition for transform */
+    z-index: 1000;
+    transition: transform 0.3s ease-out;
   }
 }
 
 .header.hidden {
-  transform: translateY(-100%); /* Hide the header off-screen */
+  transform: translateY(-100%);
 }
 
-/* Add padding or margin to body or other elements */
 @media (max-width: 1200px) {
   body {
-    padding-top: 66px; /* Adjust padding to match header height */
+    padding-top: 66px;
   }
 }
 .container-header {
@@ -92,13 +91,13 @@ body.dark .above-carousel p {
 }
 @media (max-width: 1200px) {
   .container-header {
-    width: 100%; /* Fluid width for smaller screens */
-    padding: 0 20px; /* Adjust padding for smaller screens */
+    width: 100%;
+    padding: 0 20px;
   }
 }
 @media (max-width: 768px) {
   .container-header {
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    flex-wrap: wrap;
   }
 }
 
@@ -112,7 +111,7 @@ body.dark .above-carousel p {
 }
 @media (max-width: 1200px) {
   .header a {
-    margin-right: 10px; /* Reduce margin for smaller screens */
+    margin-right: 10px;
   }
 }
 
@@ -123,11 +122,11 @@ body.dark .above-carousel p {
 }
 
 .hamburger-menu {
-  display: none; /* Initially hide the hamburger menu */
+  display: none;
   cursor: pointer;
   height: 24px;
-  width: 30px; /* Set a width for better visibility */
-  z-index: 3; /* Ensure it is on top of other elements */
+  width: 30px;
+  z-index: 3;
 }
 
 @media (max-width: 1200px) {
@@ -151,18 +150,18 @@ body.dark .above-carousel p {
     text-align: center;
     padding: 20px 0;
     transition: max-height 0.3s ease-out;
-    max-height: 0; /* Start with max-height of 0 */
+    max-height: 0;
     overflow: hidden;
   }
   .nav-links.active {
-    display: flex; /* Show when active */
-    max-height: 500px; /* Adjust max height as needed to show the links */
+    display: flex;
+    max-height: 500px;
   }
   .nav-links.active a {
     padding: 10px 0;
   }
   .hamburger-menu {
-    display: block; /* Show hamburger menu */
+    display: block;
   }
 }
 .sticky {
@@ -191,7 +190,7 @@ body.dark .above-carousel p {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  justify-content: space-between; /* Aligns items with space between them */
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
@@ -199,15 +198,15 @@ body.dark .above-carousel p {
   flex: 1 1 auto;
   margin: 0;
   padding: 17px 0 10px 0;
-  text-align: right; /* Align text to the right */
+  text-align: right;
   font-size: 16px;
 }
 .below .section strong {
   margin-left: auto;
-  margin-right: 10px; /* Adjust margins to maintain original design */
+  margin-right: 10px;
 }
 .below .section .fa-regular.fa-clock {
-  margin-left: 5px; /* Optional: Add some space between strong and clock icon */
+  margin-left: 5px;
 }
 @media (max-width: 1199px) {
   .below .section {
@@ -215,22 +214,22 @@ body.dark .above-carousel p {
   }
   .below .section p {
     flex-basis: 100%;
-    text-align: right; /* Align text to the right on smaller screens */
-    margin-right: 0; /* Reset right margin */
+    text-align: right;
+    margin-right: 0;
   }
   .below .section strong {
     flex-basis: 100%;
-    margin-left: 0; /* Reset left margin */
-    margin-right: 0; /* Reset right margin */
-    order: 1; /* Ensure strong element appears first in smaller screens */
-    display: block; /* Force strong element to break onto a new line */
-    margin-bottom: 5px; /* Optional: Add margin bottom for separation */
+    margin-left: 0;
+    margin-right: 0;
+    order: 1;
+    display: block;
+    margin-bottom: 5px;
   }
   .below .section .fa-regular.fa-clock {
     flex-basis: 100%;
-    margin-left: 0; /* Reset left margin */
-    margin-right: 0; /* Reset right margin */
-    order: 2; /* Ensure clock icon follows strong element */
+    margin-left: 0;
+    margin-right: 0;
+    order: 2;
   }
 }
 
@@ -241,14 +240,12 @@ body.dark .above-carousel p {
   height: 24px;
 }
 
-/* Hide the default input */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Slider base styles */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -256,9 +253,9 @@ body.dark .above-carousel p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: red; /* Default color when off */
+  background-color: red;
   transition: background-color 0.4s;
-  border-radius: 24px; /* Round slider shape */
+  border-radius: 24px;
   min-width: 50px;
 }
 
@@ -269,18 +266,16 @@ body.dark .above-carousel p {
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: white; /* Default color of the thumb */
+  background-color: white;
   transition: background-color 0.7s, transform 0.7s;
-  border-radius: 50%; /* Rounded shape for the thumb */
+  border-radius: 50%;
 }
 
-/* Styles for the slider when it's checked (active state) */
 input:checked + .slider {
-  background-color: white; /* Change background color when checked */
+  background-color: white;
 }
 
-/* Move the thumb to the right when checked */
 input:checked + .slider:before {
-  background-color: red; /* Change color of the thumb when checked */
+  background-color: red;
   transform: translateX(26px);
 }

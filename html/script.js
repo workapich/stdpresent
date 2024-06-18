@@ -206,10 +206,8 @@ function toggleImagesBasedOnMode() {
   });
 }
 
-// Initial toggle based on current body class
 toggleImagesBasedOnMode();
 
-// Listen for changes in body class (e.g., toggling dark mode)
 const observer = new MutationObserver(() => {
   toggleImagesBasedOnMode();
 });
