@@ -20,6 +20,7 @@ export const HalfScreen = styled.div`
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
+  order: ${({ order }) => order};
 `;
 export const HeadText = styled.h1`
   font-weight: 700;

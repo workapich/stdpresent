@@ -15,7 +15,7 @@ const HalfSection = ({ picture, order }) => {
   return (
     <Wrapper>
       {!order ? (
-        <HalfScreen style={{ order: order || undefined }}>
+        <HalfScreen>
           <InnerContainer>
             <HeadText>Buchen Sie den Grillkurs jetzt</HeadText>
             <ul>
@@ -24,11 +24,11 @@ const HalfSection = ({ picture, order }) => {
               <ListItem>1 Tag</ListItem>
               <ListItem>lernen Sie die Kunst des Grillens</ListItem>
             </ul>
-            <PrimaryButton width="174px">Dry Aged</PrimaryButton>
+            <PrimaryButton>Dry Aged</PrimaryButton>
           </InnerContainer>
         </HalfScreen>
       ) : (
-        <HalfScreen style={{ order: order || undefined }}>
+        <HalfScreen order={order}>
           <InnerContainer className="important-width">
             <HeadText>Custome spices for your meat</HeadText>
             <SmallText>
