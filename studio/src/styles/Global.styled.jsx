@@ -42,5 +42,6 @@ export const colors = {
   //moje boje
   redCardBack: "rgba(166, 33, 32, 1)",
   bodyColor: "#0f0f0f",
+  footerColor: "#b50014",
   buttonBgForRed: "#fff",
 };

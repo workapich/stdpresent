@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  Wrapper,
-  SectionAbove,
-} from "../../styles/components/Home/AboveGold.styled";
+import { BreakWrapper } from "../../styles/components/Home/Break.styled";
 import pictureMain from "../../assets/img/vonal 1.png";
-// import pictureMain from "../../assets/img/secondLogo.jpg";
 import { PrimaryButton } from "../../styles/ui/Buttons.styled";
 
 //old imports
@@ -14,11 +10,11 @@ import {
 } from "../../styles/components/Home/HalfSection.styled";
 //old imports
 
-const BreakSection = () => {
+const BreakSection = ({ padding }) => {
   return (
-    <Wrapper>
+    <BreakWrapper padding={padding}>
       <StyledImage src={pictureMain} alt="Description of the image" />
-    </Wrapper>
+    </BreakWrapper>
   );
 };
 
