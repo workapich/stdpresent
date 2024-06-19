@@ -44,4 +44,6 @@ export const colors = {
   bodyColor: "#0f0f0f",
   footerColor: "#b50014",
   buttonBgForRed: "#fff",
+  headerColor: "rgba(181, 0, 20, 1)",
+  lineBelow: "rgba(37, 37, 37, 1)  ",
 };

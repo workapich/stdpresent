@@ -11,7 +11,6 @@ import {
 } from "../../styles/components/Home/HalfSection.styled";
 import { PrimaryButton } from "../../styles/ui/Buttons.styled";
 const HalfSection = ({ picture, order }) => {
-  console.log(picture);
   return (
     <Wrapper>
       {!order ? (
