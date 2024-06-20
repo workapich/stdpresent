@@ -10,12 +10,15 @@ import pictureLeft from "../assets/img/spice.jpg";
 import DryAged from "../components/Home/DryAged";
 import Header from "../components/Home/Header";
 import LineBelowHead from "../components/Home/LineBelowHead";
+import SwiperSection from "../components/Home/SwiperSection";
+import Carousel from "../components/Home/Carousel";
 
 const Home = () => {
   return (
     <>
       <Header />
       <LineBelowHead />
+      <SwiperSection />
       <DryAged />
       <HalfSection picture={pictureRight} />
       <DarkSection />
@@ -24,6 +27,8 @@ const Home = () => {
       <BreakSection />
       <GoldSection />
       <BreakSection />
+      <Carousel />
+
       <Footer />
     </>
   );

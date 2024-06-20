@@ -1,0 +1,73 @@
+.swiper-container {
+  position: relative;
+  width: 100%;
+}
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 675px;
+  object-fit: cover;
+}
+.swiper-pagination-bullets {
+  bottom: 30px !important;
+  top: auto !important;
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  border: 2px solid white;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.swiper-pagination-bullet-active {
+  background: #ea2f00;
+}
+
+:root {
+  --swiper-navigation-size: 22px;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 10px !important;
+  top: auto !important;
+
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+  /* width: 100px; */
+
+  text-align: center;
+}
+
+.arrow-left {
+  left: calc(50% - 100px);
+}
+
+.arrow-right {
+  left: calc(50% + 68px);
+
+  /* right: 670px; */
+
+  /* right: 10px; */
+}

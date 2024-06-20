@@ -4,6 +4,7 @@ import {
   Wrapper,
   NavImage,
   NavItems,
+  Indexd,
 } from "../../styles/components/Home/Header.styled";
 import { links } from "../../utils/links";
 const Header = () => {
@@ -12,9 +13,9 @@ const Header = () => {
       <NavBar>
         {links.map((link) =>
           link.picture ? (
-            <div className="" key={link.id}>
+            <Indexd key={link.id}>
               <NavImage src={link.picture} alt="picture" />
-            </div>
+            </Indexd>
           ) : (
             <NavItems href="#" key={link.id}>
               {link.text}

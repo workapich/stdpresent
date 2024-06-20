@@ -22,8 +22,9 @@ export const NavBar = styled.section`
   position: relative;
 `;
 export const NavImage = styled.img`
-  /* z-index: 3; */
-  transform: translateY(20%);
+  z-index: 3;
+  position: absolute;
+  /* transform: translateY(20%); */
 `;
 export const NavItems = styled.a`
   font-size: 16px;
@@ -31,4 +32,9 @@ export const NavItems = styled.a`
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
+`;
+export const Indexd = styled.div`
+  position: relative;
+  height: 100px;
+  width: 178px;
 `;

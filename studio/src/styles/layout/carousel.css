@@ -1,0 +1,32 @@
+.carousel {
+  padding: 0 200px  ;
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 500px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    width: 317px; /* Smaller width for non-active slides */
+    height: 257px; /* Smaller height for non-active slides */
+    opacity: 0.3; /* Add the overlay effect */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .swiper-slide.active {
+    width: 429px; /* Larger width for active slide */
+    height: 414px; /* Larger height for active slide */
+    opacity: 1; /* Remove overlay for active slide */
+  }
+
+  .swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
