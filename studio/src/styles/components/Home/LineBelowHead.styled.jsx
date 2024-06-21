@@ -7,6 +7,7 @@ export const Wrapper = styled.section`
   width: 100%;
   color: #fff;
   background-color: ${colors.lineBelow};
+  height: 30px;
 `;
 
 export const BelowSection = styled.section`
@@ -16,4 +17,5 @@ export const BelowSection = styled.section`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 10px;
 `;

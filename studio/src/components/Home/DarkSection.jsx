@@ -9,7 +9,7 @@ import {
 import { HeadText } from "../../styles/components/Home/HalfSection.styled";
 import { PrimaryButton } from "../../styles/ui/Buttons.styled";
 import BreakSection from "../../components/Home/BreakSection";
-
+import { darkImages } from "../../utils/darkimages";
 //
 import fistPicture from "../../assets/img/wurstchen.png";
 import secondPicture from "../../assets/img/hanchen.png";
@@ -33,10 +33,9 @@ const DarkSection = () => {
       <PrimaryButton bgcolor="Any">Das Handwerk</PrimaryButton>
       <BreakSection padding="yes" />
       <ImageContainer>
-        <DarkImage src={fistPicture} alt="asas" />
-        <DarkImage src={secondPicture} alt="asas" />
-        <DarkImage src={thirdPicture} alt="asas" />
-        <DarkImage src={fourthPicture} alt="asas" />
+        {darkImages.map((image) => (
+          <DarkImage src={image.picture} alt={image.id} />
+        ))}
       </ImageContainer>
     </DarkWrap>
   );

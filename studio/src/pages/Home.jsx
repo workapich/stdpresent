@@ -12,6 +12,7 @@ import Header from "../components/Home/Header";
 import LineBelowHead from "../components/Home/LineBelowHead";
 import SwiperSection from "../components/Home/SwiperSection";
 import Carousel from "../components/Home/Carousel";
+import Paralax from "../components/Home/Paralax";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <HalfSection picture={pictureRight} />
       <DarkSection />
       <HalfSection picture={pictureLeft} order="2" />
+      <Paralax />
       <AboveGold />
       <BreakSection />
       <GoldSection />

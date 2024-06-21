@@ -8,6 +8,7 @@ const LineBelowHead = () => {
   return (
     <Wrapper>
       <BelowSection>
+        <i class="fa-regular fa-clock"></i>
         Opentime: Di. - Fr.: 07:00-13:00 und 15:00-18:30. Sa.: 07:30 - 12:30
       </BelowSection>
     </Wrapper>
